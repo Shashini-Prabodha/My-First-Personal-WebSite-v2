@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu;
+    text-decoration: none;
+    overflow-x: hidden;
+    letter-spacing: 1px;
+
+}
+
+/*navbar styling*/
+.navbar {
+    /*background: crimson;*/
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 99;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    background: crimson;
+    padding: 15px 0;
+}
+
+.navbar .logo a {
+    color: white;
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.navbar .logo a span {
+    color: crimson;
+    transition: all 0.3s ease;
+
+}
+
+.navbar.sticky .logo a span {
+    color: white;
+}
+
+.max-width {
+    max-width: 1300px;
+    margin: auto;
+    right: 50px;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu li {
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: crimson;
+}
+
+/*menu button styling*/
+.menu_button {
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/*home section styling*/
+.home {
+    display: flex;
+    height: 100vh;
+    background: url("../asserts/icon/Artboard 1.jpg");
+    background-size: cover;
+    color: white;
+
+}
+
+.home .max-width {
+    margin: auto 0 auto 70px;
+    width: max-content;
+}
+
+.home .home-content .text1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.home .home-content .text2 {
+    font-size: 78px;
+    font-weight: 600;
+    margin-left: -3px;
+    color: white;
+}
+
+.home .home-content .text3 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: -3px;
+    color: white;
+    bottom: 51px;
+    left: 38%;
+    position: absolute;
+}
+
+.home .home-content .text3 span {
+    font-size: 35px;
+    color: crimson;
+
+}
+
+.back-rect {
+    width: 540px;
+    height: 540px;
+    border-radius: 100px 0 0 0;
+    background: #926e689e;
+    transform: rotate(74deg);
+    right: -23px;
+    top: 79px;
+    position: absolute;
+    box-shadow: rgba(255, 21, 65, 0.42) 0px 8px 600px;
+}
+
+.front-img {
+    width: 550px;
+    height: 550px;
+    background: grey;
+    right: -51px;
+    position: absolute;
+    background: url(../asserts/icon/home-side-pic.png);
+    background-size: cover;
+    background-position: center;
+    transform: translateY(79px);
+}
+
+.button {
+    background: crimson;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 10px;
+    border-style: hidden;
+    margin-top: 40px;
+}
+
+#btnContactme {
+    transform: translate(50px);
+}
+
+.button a {
+    color: white;
+    font-size: 20px;
+}
+
+/*responsive media query strating*/
+@media (max-width: 1440px) {
+
+    .back-rect {
+        width: 490px;
+        height: 490px;
+    }
+
+    .front-img {
+        width: 510px;
+        height: 510px;
+    }
+
+}
+
+@media (max-width: 1420px) and (min-width: 1370px) {
+    .home .home-content .text2 {
+        font-size: 72px;
+    }
+}
+
+@media (min-width: 1040px) and (max-width: 1370px) {
+    .navbar .max-width {
+        padding: 0 50px;
+    }
+
+    .home .home-content .text2 {
+        font-size: 74px;
+        width: 500px;
+    }
+
+}
+
+@media (min-width: 950px) and (max-width: 1040px) {
+    .navbar .max-width {
+        padding: 0 60px;
+    }
+
+    .home .max-width {
+        width: 500px;
+        padding: 0 20px;
+    }
+
+    .back-rect {
+        width: 425px;
+        top: 120px;
+        height: 425px;
+    }
+
+    .front-img {
+        width: 430px;
+        height: 430px;
+        top: 50px;
+    }
+
+    .home .max-width {
+        margin: auto 0 auto 40px;
+    }
+
+    .home .home-content .text1 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .home .home-content .text2 {
+        font-size: 68px;
+        font-weight: 600;
+        color: white;
+        width: 500px;
+    }
+
+    .home .home-content .text3 {
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+    .home .home-content .text3 span {
+        font-size: 30px;
+
+    }
+}
+
+@media (max-width: 950px) {
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .menu_button {
+        display: block;
+        z-index: 999;
+        font-size: 32px;
+    }
+
+    .menu_button i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        background: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 0;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .home .max-width {
+        padding: 0 10px;
+    }
+
+    .back-rect {
+        display: none;
+    }
+
+    .front-img {
+        display: none;
+    }
+
+    .home .home-content .text2 {
+        font-size: 65px;
+    }
+
+    .home .home-content .text3 {
+        font-size: 42px;
+        left: 28%;
+    }
+
+    .navbar .menu li {
+        display: block;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+}
+
+@media (max-width: 490px) {
+    .home .max-width {
+        margin-left: 30px;
+    }
+
+    .home .home-content .text1 {
+        font-size: 25px;
+    }
+
+    .home .home-content .text2 {
+        font-size: 50px;
+    }
+
+    .home .home-content .text3 {
+        font-size: 31px;
+        margin-left: 0px;
+
+    }
+}
+
+@media (max-width: 380px) and (min-width: 320px) {
+    .home .max-width {
+        margin-left: 30px;
+    }
+
+    .home .home-content .text1 {
+        font-size: 25px;
+    }
+
+    .home .home-content .text2 {
+        font-size: 46px;
+    }
+
+    .home .home-content .text3 {
+        font-size: 31px;
+        margin-left: 0px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
