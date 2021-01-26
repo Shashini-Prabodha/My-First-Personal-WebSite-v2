@@ -146,22 +146,149 @@
 .button {
     background: crimson;
     font-weight: 500;
-    border-radius: 15px;
+    border-radius: 9px;
     padding: 10px;
     border-style: hidden;
     margin-top: 40px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+
 }
 
-#btnContactme {
-    transform: translate(50px);
+#btnContactme:hover {
+    background: none;
+    border: 1px solid crimson;
 }
 
 .button a {
     color: white;
     font-size: 20px;
+    font-family: "Ubuntu Light";
+    font-weight: 600;
 }
 
+#btnContactme a:hover {
+    color: crimson;
+}
+
+
+/*about me section styling*/
+.aboutme {
+    padding: 100px 0;
+    display: block;
+    background: #FDFDFD;
+
+}
+
+.aboutme h1 {
+    font-weight: bold;
+    font-size: 45px;
+    padding: 0px;
+    margin-bottom: 60px;
+    margin-left: 5%;
+    position: relative;
+}
+
+.aboutme .title span {
+    color: crimson;
+}
+
+.aboutme h1::before {
+    content: "";
+    width: 180px;
+    height: 4px;
+    border-radius: 10px 0 10px 0;
+    background: black;
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+
+}
+
+/*.aboutme-content img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid black;
+    position: absolute;
+
+}
+.aboutme-content p{
+    text-align: justify;
+    border: 1px solid #d41c1c;
+    width: 750px;
+    transform: translate(500px);
+    position: absolute;
+}*/
+.aboutme-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+
+.aboutme-content .left {
+    width: 45%;
+}
+
+.aboutme-content .left img {
+    width: 400px;
+    /*margin-left: 50px;*/
+    height: 420px;
+    object-fit: cover;
+    border-radius: 6px;
+    /*box-shadow: #0e0e0e 2px 5px px;*/
+}
+
+.aboutme-content .right {
+    width: 55%;
+    letter-spacing: 2px;
+}
+
+.aboutme-content .caption {
+    font-size: 40px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.aboutme-content .caption span {
+    color: crimson;
+}
+
+.aboutme-content .right p {
+    text-align: justify;
+    font-size: 20px;
+}
+
+.aboutme .button {
+
+    transition: all 0.3s ease;
+
+}
+
+#btnCV a {
+    font-size: 17px;
+}
+
+#btnCV:hover {
+    background: transparent;
+    border-color: crimson;
+    color: crimson;
+}
+
+#btnCV a:hover {
+    font-size: 17px;
+    color: crimson;
+    background: transparent;
+
+}
+
+
 /*responsive media query strating*/
+
+
 @media (max-width: 1440px) {
 
     .back-rect {
@@ -180,6 +307,42 @@
     .home .home-content .text2 {
         font-size: 72px;
     }
+}
+
+@media (max-width: 1250px){
+    .aboutme .aboutme-content .column {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1044px) and (min-width: 950px){
+
+    .aboutme-content .left img {
+        width: 350px;
+        height: 380px;
+    }
+
+}
+@media (max-width: 950px) {
+    .aboutme .aboutme-content .column {
+        width: 50%;
+    }
+    .aboutme .aboutme-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .aboutme .aboutme-content .right{
+        flex: 100%;
+    }
+    .aboutme h1{
+        text-align: center;
+    }
+    .aboutme h1::before {
+        left: 330px;
+        width: 170px;
+    }
+
 }
 
 @media (min-width: 1040px) and (max-width: 1370px) {
@@ -260,7 +423,7 @@
 
     .navbar .menu {
         position: fixed;
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(0, 0, 0, 0.95);
         width: 100%;
         height: 100vh;
         left: -100%;
@@ -326,7 +489,18 @@
 
     }
 }
-
+@media (max-width: 600px) and (min-width: 490px) {
+    .aboutme-content .left img{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width: 490px) and (min-width: 380px) {
+    .aboutme-content .left img{
+        width: 260px;
+        height: 260px;
+    }
+}
 @media (max-width: 380px) and (min-width: 320px) {
     .home .max-width {
         margin-left: 30px;
@@ -344,13 +518,11 @@
         font-size: 31px;
         margin-left: 0px;
     }
-
+    .aboutme-content .left img{
+        width: 230px;
+        height: 230px;
+    }
 }
-
-
-
-
-
 
 
 
