@@ -34,12 +34,12 @@
 .navbar .logo a span {
     color: crimson;
     transition: all 0.3s ease;
-
 }
 
 .navbar.sticky .logo a span {
     color: white;
 }
+
 
 .max-width {
     max-width: 1300px;
@@ -67,6 +67,11 @@
 
 .navbar .menu li a:hover {
     color: crimson;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: white;
+    transform: scale(1.05);
 }
 
 /*menu button styling*/
@@ -458,11 +463,12 @@ section h1::before {
     height: 100%;
 }
 
-.box h2{
+.box h2 {
     position: absolute;
     bottom: 7px;
     left: 35%;
 }
+
 .projects .btnViewMore {
     font-size: 20px;
     left: 50%;
@@ -494,18 +500,132 @@ section h1::before {
     background: #FDFDFD;
 }
 
-.service-content {
-    height: 100%;
-    padding: 20px 25px;
-    position: relative;
-    justify-content: space-between;
-    display: flex;
-    margin: 5%;
 
+.serviceimg {
+    width: 505px;
+    position: absolute;
+    right: 30px;
+    z-index: 1;
+    transform: translate(1px, -36px);
 }
 
-.service h1 {
-    margin-right: 5%;
+
+.slider {
+    width: 650px;
+    height: 500px;
+    /*border: 1px solid black;*/
+    /*box-shadow: grey 2px 5px 10px;*/
+    /*background: rgba(0,0,0,0.15);*/
+    display: flex;
+    position: absolute;
+}
+
+
+.slider .box {
+    width: 650px;
+    height: 380px;
+    border-radius: 100px 0 100px 0;;
+    box-shadow: grey 2px 5px 5px;
+    background: rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .slides {
+    width: 300%;
+    height: 380px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+}
+
+.slides p {
+    width: 640px;
+    text-align: center;
+    margin: 125px -25px 55px 0px;
+    position: absolute;
+}
+
+.header {
+    width: 80vw;
+    height: 65px;
+    background: #b1b1b1;
+    border-radius: 36px 0 0 0;
+    right: 0;
+    position: absolute;
+    margin: -14px;
+}
+
+.web i {
+    color: #de0000;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.web {
+    width: 670px;
+    height: 50px;
+    position: absolute;
+    margin: 8px 0 0px 0px;
+    left: 220px;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.web span {
+    color: #de0000;
+}
+
+.slide {
+    width: 650px;
+    height: 380px;
+    border-radius: 100px 0 100px 0;;
+    /*box-shadow: grey 2px 5px 10px;*/
+    background: rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.slider input {
+    display: none;
+}
+
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    bottom: 10px;
+    left: -75px;
+}
+
+.manual-btn {
+    border: 2px solid crimson;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.manual-btn:hover {
+    background: #ff253a;
+}
+
+#radio1:checked ~ .first {
+    margin-left: -0px;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -650px;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -1300px;
 }
 
 
@@ -513,9 +633,10 @@ section h1::before {
 
 @media (max-width: 1270px) {
     .projects .project-content {
-position: relative;
+        position: relative;
     }
-    .project-content .card{
+
+    .project-content .card {
         width: calc(50% - 20px);
         margin-bottom: 20px;
     }
@@ -602,7 +723,6 @@ position: relative;
         left: 50%;
         transform: translate(-50%);
     }
-
 
 
 }
@@ -746,7 +866,6 @@ position: relative;
     }
 
 
-
 }
 
 @media (max-width: 800px) {
@@ -762,6 +881,7 @@ position: relative;
     }
 
 }
+
 @media (max-width: 790px) and (min-width: 600px) {
 
 
@@ -853,12 +973,14 @@ position: relative;
         color: crimson;
     }
 }
-@media (max-width: 475px){
+
+@media (max-width: 475px) {
     .projects .project-content {
         position: relative;
         width: 100%;
     }
-    .project-content .card .box{
+
+    .project-content .card .box {
         height: 300px;
     }
 
@@ -868,7 +990,8 @@ position: relative;
         height: 30px;
 
     }
-    .card .box h2{
+
+    .card .box h2 {
         position: absolute;
         bottom: 7px;
         font-size: 20px;
@@ -876,9 +999,10 @@ position: relative;
     }
 
 }
-@media (max-width: 425px){
 
-    .card .box h2{
+@media (max-width: 425px) {
+
+    .card .box h2 {
         position: absolute;
         bottom: 7px;
         font-size: 20px;
@@ -886,6 +1010,7 @@ position: relative;
     }
 
 }
+
 @media (max-width: 380px) and (min-width: 320px) {
     .home .max-width {
         margin-left: 30px;
@@ -909,7 +1034,8 @@ position: relative;
         font-size: 30px;
         color: crimson;
     }
-    .project-content .card .box{
+
+    .project-content .card .box {
         height: 250px;
     }
 
