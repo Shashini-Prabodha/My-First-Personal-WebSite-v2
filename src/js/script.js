@@ -13,4 +13,6 @@ $(document).ready(function () {
         $('.navbar .menu').toggleClass("active");
         $('.menu_button i').toggleClass("active");
     });
+
+
 });
