@@ -500,7 +500,14 @@ section h1::before {
     background: #FDFDFD;
 }
 
+.service h1 {
+    margin: 5%;
+}
+.service-content{
+    margin-left: 5%;
+    margin-top: 8%;
 
+}
 .serviceimg {
     width: 505px;
     position: absolute;
@@ -508,7 +515,6 @@ section h1::before {
     z-index: 1;
     transform: translate(1px, -36px);
 }
-
 
 .slider {
     width: 650px;
@@ -518,13 +524,16 @@ section h1::before {
     /*background: rgba(0,0,0,0.15);*/
     display: flex;
     position: absolute;
+
 }
 
 
 .slider .box {
-    width: 650px;
+    transition: all 2s ease;
+
+    width: 100%;
     height: 380px;
-    border-radius: 100px 0 100px 0;;
+    border-radius: 100px 0 100px 0;
     box-shadow: grey 2px 5px 5px;
     background: rgba(0, 0, 0, 0.15);
     position: relative;
@@ -532,22 +541,34 @@ section h1::before {
 }
 
 .slider .slides {
+
     width: 300%;
     height: 380px;
     display: flex;
     overflow: hidden;
     position: absolute;
 }
+/*#s2{
+    background: rgba(153, 19, 19, 0.64);
+}*/
 
+/*
 .slides p {
-    width: 640px;
+    width: 90%;
     text-align: center;
-    margin: 125px -25px 55px 0px;
+    margin: 125px -25px 55px 20px;
+    position: absolute;
+}
+*/
+.slides p {
+    width: 87%;
+    text-align: center;
+    margin: 95px -91px 149px 50px;
     position: absolute;
 }
 
 .header {
-    width: 80vw;
+    width: 83vw;
     height: 65px;
     background: #b1b1b1;
     border-radius: 36px 0 0 0;
@@ -566,8 +587,8 @@ section h1::before {
     width: 670px;
     height: 50px;
     position: absolute;
-    margin: 8px 0 0px 0px;
-    left: 220px;
+    margin: 4px 0 0px 0px;
+    left: 185px;
     font-weight: 700;
     font-size: 26px;
 }
@@ -579,7 +600,7 @@ section h1::before {
 .slide {
     width: 650px;
     height: 380px;
-    border-radius: 100px 0 100px 0;;
+    border-radius: 100px 0 100px 0;
     /*box-shadow: grey 2px 5px 10px;*/
     background: rgba(0, 0, 0, 0.15);
     position: relative;
@@ -617,7 +638,7 @@ section h1::before {
 }
 
 #radio1:checked ~ .first {
-    margin-left: -0px;
+    margin-left: 0;
 }
 
 #radio2:checked ~ .first {
@@ -671,21 +692,64 @@ section h1::before {
     }
 }
 
-@media (max-width: 1180px)  and (min-width: 1080px) {
-    .skill-content .skillimg {
-        width: 600px;
-        position: absolute;
-        right: -100px;
-        z-index: 1;
-    }
-}
-
-
 @media (max-width: 1250px) {
     .aboutme .aboutme-content .column {
         width: 50%;
     }
+    .serviceimg {
+        width: 420px;
+        transform: translate(1px, -8px);
+    }
+    .slider {
+        width: 600px;
+    }
+    .slide {
+        width: 600px;
+    }
+
+    #radio2:checked ~ .first {
+        margin-left: -600px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -1200px;
+    }
 }
+@media (max-width: 1180px)  and (min-width: 1080px) {
+    .skill-content .skillimg {
+        width: 600px;
+
+    }
+
+}
+@media (max-width:1080px) {
+    .serviceimg {
+        width: 350px;
+        transform: translate(20px, 35px);
+    }
+    .slider {
+        width: 570px;
+    }
+    .slide {
+        width: 570px;
+    }
+    #radio1:checked ~ .first {
+        margin-left: 0;
+    }
+
+    #radio2:checked ~ .first {
+        margin-left: -570px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -1140px;
+    }
+
+    .web {
+        font-size: 24px;
+    }
+}
+
 
 @media (max-width: 1044px) and (min-width: 950px) {
 
@@ -696,36 +760,6 @@ section h1::before {
 
 }
 
-@media (max-width: 950px) {
-    .aboutme .aboutme-content .column {
-        width: 50%;
-    }
-
-    .aboutme .aboutme-content .left {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-
-    .aboutme .aboutme-content .right {
-        flex: 100%;
-    }
-
-    .aboutme h1, .skills h1, .projects h1, .service h1 {
-        text-align: center;
-    }
-
-    .skill-content .skillimg {
-        width: 600px;
-        position: relative;
-        /* right: -100px; */
-        z-index: 1;
-        left: 50%;
-        transform: translate(-50%);
-    }
-
-
-}
 
 @media (min-width: 1040px) and (max-width: 1370px) {
     .navbar .max-width {
@@ -743,7 +777,7 @@ section h1::before {
 
 }
 
-@media (min-width: 950px) and (max-width: 1040px) {
+@media (max-width: 1040px) and (min-width: 950px) {
     .navbar .max-width {
         padding: 0 60px;
     }
@@ -864,13 +898,126 @@ section h1::before {
         margin: 0 auto 60px;
         width: fit-content;
     }
+    .aboutme .aboutme-content .column {
+        width: 50%;
+    }
 
+    .aboutme .aboutme-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .aboutme .aboutme-content .right {
+        flex: 100%;
+    }
+
+    .aboutme h1, .skills h1, .projects h1, .service h1 {
+        text-align: center;
+    }
+
+    .skill-content .skillimg {
+        width: 600px;
+        position: relative;
+        z-index: 1;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .service .title{
+        margin: 25%;
+
+    }
 
 }
+@media (max-width: 880px) {
+.web {
+    left: 210px;
+    font-size: 24px;
+}
+}
+@media (max-width: 950px) and (min-width: 850px) {
 
+    .serviceimg {
+        width: 285px;
+        transform: translate(30px, 65px);
+    }
+    .slider {
+        width: 520px;
+    }
+    .slide {
+        width: 520px;
+    }
+    .manual-btn {
+        transform: translate(-70px, 0);
+    }
+
+    #radio2:checked ~ .first {
+        margin-left: -520px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -1040px;
+    }
+    .web {
+        left: 140px;
+        font-size: 24px;
+    }
+
+}
+@media (max-width: 850px)  and (min-width: 720px){
+    .serviceimg{
+        display: none;
+    }
+    .slider {
+        width: 580px;
+    }
+    .slide {
+        width: 580px;
+    }
+    .manual-btn {
+        transform: translate(-35px, 0);
+    }
+
+    #radio2:checked ~ .first {
+        margin-left: -580px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -1160px;
+    }
+
+}
+@media (max-width: 720px) {
+    .serviceimg {
+        display: none;
+    }
+
+    .slider {
+        width: 490px;
+    }
+
+    .slide {
+        width: 490px;
+    }
+    .slides p{
+        width: 80%;
+    }
+
+    .manual-btn {
+        transform: translate(-50px, 0);
+    }
+
+    #radio2:checked ~ .first {
+        margin-left: -490px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -980px;
+    }
+
+}
 @media (max-width: 800px) {
     .project-content {
-
         display: flex;
         flex-direction: column;
         margin: 5%;
@@ -879,7 +1026,61 @@ section h1::before {
     .project-content .card {
         width: 100%;
     }
+    .web {
+        left: 175px;
+    }
 
+}
+@media (max-width: 600px) and (min-width: 550px) {
+    .slider {
+        width: 450px;
+    }
+    .slide {
+        width: 450px;
+    }
+
+    .manual-btn {
+        transform: translate(-90px, 0);
+    }
+    .web {
+        left: 90px;
+        font-size: 22px;
+    }
+    .header {
+        width: 78vw;
+    }
+    #radio2:checked ~ .first {
+        margin-left: -450px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -900px;
+    }
+}
+@media (max-width: 550px) and (min-width: 475px) {
+    .slider {
+        width: 390px;
+    }
+    .slide {
+        width: 390px;
+    }
+    .manual-btn {
+        transform: translate(-134px, 0);
+    }
+    .header {
+        width: 80vw;
+    }
+    .web {
+        left: 62px;
+        font-size: 20px;
+    }
+    #radio2:checked ~ .first {
+        margin-left: -390px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -780px;
+    }
 }
 
 @media (max-width: 790px) and (min-width: 600px) {
@@ -903,6 +1104,10 @@ section h1::before {
 
     .skill-content .left .bar5 img {
         top: 358px;
+    }
+    .web {
+        left: 185px;
+        font-size: 23px;
     }
 
 }
@@ -949,6 +1154,10 @@ section h1::before {
         margin-left: 0px;
 
     }
+    .service .title{
+       margin-right: 0;
+    }
+
 }
 
 /*@media (max-width: 600px) and (min-width: 490px) {
@@ -972,8 +1181,37 @@ section h1::before {
         font-size: 33px;
         color: crimson;
     }
-}
 
+}
+@media (max-width: 490px) and (min-width: 420px) {
+    .slider {
+        width: 330px;
+    }
+    .slide {
+        width: 330px;
+    }
+    .manual-btn {
+        transform: translate(-165px, 0);
+    }
+
+    .slides p{
+        width: 70%;
+    }
+    #radio2:checked ~ .first {
+        margin-left: -330px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -660px;
+    }
+    .web {
+        left: 58px;
+        font-size: 16px;
+    }
+    .header {
+        width: 80vw;
+    }
+}
 @media (max-width: 475px) {
     .projects .project-content {
         position: relative;
@@ -1009,6 +1247,44 @@ section h1::before {
         left: 21%;
     }
 
+
+}
+@media (max-width: 425px)  and (min-width: 381px){
+    .service .title{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .slider {
+        width: 290px;
+    }
+    .slide {
+        width: 290px;
+    }
+    .manual-btn {
+        transform: translate(-165px, 0);
+    }
+    .header {
+        width: 76vw;
+    }
+    .web {
+        left: 61px;
+        font-size: 16px;
+    }
+    .web i {
+        color: #de0000;
+        margin-right: 15px;
+        font-size: 15px;
+    }
+    .slides p{
+        width: 70%;
+    }
+    #radio2:checked ~ .first {
+        margin-left: -290px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -580px;
+    }
 }
 
 @media (max-width: 380px) and (min-width: 320px) {
@@ -1044,8 +1320,53 @@ section h1::before {
         height: 100%;
         object-fit: cover;
     }*/
-}
 
+    .service-content {
+        margin-left: -1%;
+    }
+
+    .slider {
+        width: 250px;
+    }
+
+    .slide {
+        width: 250px;
+    }
+
+    .manual-btn {
+        transform: translate(-200px, 0);
+    }
+    .service .title{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .header {
+        width: 80vw;
+    }
+    .web {
+        left: 20px;
+        font-size: 16px;
+    }
+    .slides p{
+        width: 70%;
+    }
+
+    .slide {
+        border-radius: 50px 0 50px 0;
+    }
+    .slider .box {
+        border-radius: 50px 0 50px 0;
+    }
+    #radio2:checked ~ .first {
+        margin-left: -250px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -500px;
+    }
+
+}
 
 
 
