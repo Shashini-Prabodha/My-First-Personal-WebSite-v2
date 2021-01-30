@@ -498,22 +498,41 @@ section h1::before {
 
 .service {
     background: #FDFDFD;
+
 }
 
 .service h1 {
-    margin: 5%;
+    text-align: right;
+    margin: 0 5% 0 8%;
+    z-index: 2;
+    transform: translate(0px, 50px);
 }
-.service-content{
-    margin-left: 5%;
-    margin-top: 8%;
 
+.service-content {
+    margin: 100px 5% 0% 5%;
 }
+
 .serviceimg {
     width: 505px;
     position: absolute;
     right: 30px;
     z-index: 1;
-    transform: translate(1px, -36px);
+    transform: translate(1px, -30px);
+    animation: a 2.5s ease-in-out alternate infinite;
+
+}
+
+
+@keyframes a {
+
+    0% {
+        transform: rotate(5deg);
+        right: 25px;
+    }
+    100% {
+        transform: rotate(-5deg);
+        right: 25px;
+    }
 }
 
 .slider {
@@ -523,7 +542,7 @@ section h1::before {
     /*box-shadow: grey 2px 5px 10px;*/
     /*background: rgba(0,0,0,0.15);*/
     display: flex;
-    position: absolute;
+    position: relative;
 
 }
 
@@ -548,6 +567,7 @@ section h1::before {
     overflow: hidden;
     position: absolute;
 }
+
 /*#s2{
     background: rgba(153, 19, 19, 0.64);
 }*/
@@ -650,6 +670,116 @@ section h1::before {
 }
 
 
+/*contact section styling*/
+.contact{
+    background:#fdfdfd;
+}
+.contact-content{
+    display: flex;
+}
+.contact .headerline{
+    background: #ff4568;
+    width: 100%;
+    height: 1px;
+    margin: 0 0 1% 0;
+}
+.contact .social-detail{
+    height: max-content;
+}
+.contact .social-media{
+    display: flex;
+    transform: translate(76%, 0px);
+
+}
+.social-media img{
+    width: 45px;
+    margin-right: 20px;
+    border-radius: 100%;
+    border: 1px solid grey;
+}
+
+.contact .left{
+    width: 55%;
+}
+.contact .right{
+    width: 45%;
+}
+.contactimg{
+    width: 90%;
+    border-radius: 100%;
+
+}
+.social-media .round img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    border-style: none;
+    box-shadow: grey 2px 5px 5px;
+}
+.contact .contact-content .field {
+    width: 100%;
+    padding: 10px;
+}
+.contact .message textarea{
+    resize: none;
+}
+.contact .field input , .contact .message textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding:5px 15px 5px 15px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 17px;
+    font-family: Poppins;
+}
+.contact-content .btnSent {
+    width: max-content;
+    height: 5vh;
+    background: #eae8e8;
+    border-radius: 25px;
+    font-family: 'Ubuntu';
+    padding: 10px;
+    border-style: hidden;
+    position: absolute;
+    transform: translate(165%, 0);
+    box-shadow: darkgrey 2px 5px 6px;
+    transition: all 0.6s;
+}
+.contact-content .btnSent:hover {
+    background: transparent;
+    cursor: pointer;
+    border: #000000 2px solid;
+    /*text-shadow: #4d4d4d 2px 4px 5px;*/
+    /*transform: translate(0px, -6px);*/
+    color:black ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*responsive media query strating*/
 
 @media (max-width: 1270px) {
@@ -696,13 +826,16 @@ section h1::before {
     .aboutme .aboutme-content .column {
         width: 50%;
     }
+
     .serviceimg {
         width: 420px;
         transform: translate(1px, -8px);
     }
+
     .slider {
         width: 600px;
     }
+
     .slide {
         width: 600px;
     }
@@ -715,6 +848,7 @@ section h1::before {
         margin-left: -1200px;
     }
 }
+
 @media (max-width: 1180px)  and (min-width: 1080px) {
     .skill-content .skillimg {
         width: 600px;
@@ -722,17 +856,21 @@ section h1::before {
     }
 
 }
-@media (max-width:1080px) {
+
+@media (max-width: 1080px) {
     .serviceimg {
         width: 350px;
         transform: translate(20px, 35px);
     }
+
     .slider {
         width: 570px;
     }
+
     .slide {
         width: 570px;
     }
+
     #radio1:checked ~ .first {
         margin-left: 0;
     }
@@ -898,6 +1036,7 @@ section h1::before {
         margin: 0 auto 60px;
         width: fit-content;
     }
+
     .aboutme .aboutme-content .column {
         width: 50%;
     }
@@ -923,30 +1062,36 @@ section h1::before {
         left: 50%;
         transform: translate(-50%);
     }
-    .service .title{
-        margin: 25%;
+
+    .service .title {
+        margin: 5%;
 
     }
 
 }
+
 @media (max-width: 880px) {
-.web {
-    left: 210px;
-    font-size: 24px;
+    .web {
+        left: 210px;
+        font-size: 24px;
+    }
 }
-}
+
 @media (max-width: 950px) and (min-width: 850px) {
 
     .serviceimg {
         width: 285px;
         transform: translate(30px, 65px);
     }
+
     .slider {
         width: 520px;
     }
+
     .slide {
         width: 520px;
     }
+
     .manual-btn {
         transform: translate(-70px, 0);
     }
@@ -958,22 +1103,27 @@ section h1::before {
     #radio3:checked ~ .first {
         margin-left: -1040px;
     }
+
     .web {
         left: 140px;
         font-size: 24px;
     }
 
 }
-@media (max-width: 850px)  and (min-width: 720px){
-    .serviceimg{
+
+@media (max-width: 850px)  and (min-width: 720px) {
+    .serviceimg {
         display: none;
     }
+
     .slider {
         width: 580px;
     }
+
     .slide {
         width: 580px;
     }
+
     .manual-btn {
         transform: translate(-35px, 0);
     }
@@ -987,6 +1137,7 @@ section h1::before {
     }
 
 }
+
 @media (max-width: 720px) {
     .serviceimg {
         display: none;
@@ -999,7 +1150,8 @@ section h1::before {
     .slide {
         width: 490px;
     }
-    .slides p{
+
+    .slides p {
         width: 80%;
     }
 
@@ -1016,6 +1168,7 @@ section h1::before {
     }
 
 }
+
 @media (max-width: 800px) {
     .project-content {
         display: flex;
@@ -1026,15 +1179,18 @@ section h1::before {
     .project-content .card {
         width: 100%;
     }
+
     .web {
         left: 175px;
     }
 
 }
+
 @media (max-width: 600px) and (min-width: 550px) {
     .slider {
         width: 450px;
     }
+
     .slide {
         width: 450px;
     }
@@ -1042,13 +1198,16 @@ section h1::before {
     .manual-btn {
         transform: translate(-90px, 0);
     }
+
     .web {
         left: 90px;
         font-size: 22px;
     }
+
     .header {
         width: 78vw;
     }
+
     #radio2:checked ~ .first {
         margin-left: -450px;
     }
@@ -1057,23 +1216,29 @@ section h1::before {
         margin-left: -900px;
     }
 }
+
 @media (max-width: 550px) and (min-width: 475px) {
     .slider {
         width: 390px;
     }
+
     .slide {
         width: 390px;
     }
+
     .manual-btn {
         transform: translate(-134px, 0);
     }
+
     .header {
         width: 80vw;
     }
+
     .web {
         left: 62px;
         font-size: 20px;
     }
+
     #radio2:checked ~ .first {
         margin-left: -390px;
     }
@@ -1105,6 +1270,7 @@ section h1::before {
     .skill-content .left .bar5 img {
         top: 358px;
     }
+
     .web {
         left: 185px;
         font-size: 23px;
@@ -1154,8 +1320,9 @@ section h1::before {
         margin-left: 0px;
 
     }
-    .service .title{
-       margin-right: 0;
+
+    .service .title {
+        margin-right: 0;
     }
 
 }
@@ -1183,20 +1350,24 @@ section h1::before {
     }
 
 }
+
 @media (max-width: 490px) and (min-width: 420px) {
     .slider {
         width: 330px;
     }
+
     .slide {
         width: 330px;
     }
+
     .manual-btn {
         transform: translate(-165px, 0);
     }
 
-    .slides p{
+    .slides p {
         width: 70%;
     }
+
     #radio2:checked ~ .first {
         margin-left: -330px;
     }
@@ -1204,14 +1375,17 @@ section h1::before {
     #radio3:checked ~ .first {
         margin-left: -660px;
     }
+
     .web {
         left: 58px;
         font-size: 16px;
     }
+
     .header {
         width: 80vw;
     }
 }
+
 @media (max-width: 475px) {
     .projects .project-content {
         position: relative;
@@ -1249,35 +1423,44 @@ section h1::before {
 
 
 }
-@media (max-width: 425px)  and (min-width: 381px){
-    .service .title{
+
+@media (max-width: 425px)  and (min-width: 381px) {
+    .service .title {
         margin-right: 0;
         margin-left: 0;
     }
+
     .slider {
         width: 290px;
     }
+
     .slide {
         width: 290px;
     }
+
     .manual-btn {
         transform: translate(-165px, 0);
     }
+
     .header {
         width: 76vw;
     }
+
     .web {
         left: 61px;
         font-size: 16px;
     }
+
     .web i {
         color: #de0000;
         margin-right: 15px;
         font-size: 15px;
     }
-    .slides p{
+
+    .slides p {
         width: 70%;
     }
+
     #radio2:checked ~ .first {
         margin-left: -290px;
     }
@@ -1320,7 +1503,6 @@ section h1::before {
         height: 100%;
         object-fit: cover;
     }*/
-
     .service-content {
         margin-left: -1%;
     }
@@ -1336,7 +1518,8 @@ section h1::before {
     .manual-btn {
         transform: translate(-200px, 0);
     }
-    .service .title{
+
+    .service .title {
         margin-right: 0;
         margin-left: 0;
     }
@@ -1344,20 +1527,24 @@ section h1::before {
     .header {
         width: 80vw;
     }
+
     .web {
         left: 20px;
         font-size: 16px;
     }
-    .slides p{
+
+    .slides p {
         width: 70%;
     }
 
     .slide {
         border-radius: 50px 0 50px 0;
     }
+
     .slider .box {
         border-radius: 50px 0 50px 0;
     }
+
     #radio2:checked ~ .first {
         margin-left: -250px;
     }
