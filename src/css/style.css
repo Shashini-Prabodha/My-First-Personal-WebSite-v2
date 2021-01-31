@@ -162,7 +162,7 @@
 
 #btnContactme:hover {
     background: none;
-    border: 1px solid crimson;
+    border: 2px solid crimson;
 }
 
 .button a {
@@ -518,12 +518,12 @@ section h1::before {
     right: 30px;
     z-index: 1;
     transform: translate(1px, -30px);
-    animation: a 2.5s ease-in-out alternate infinite;
+    animation: rotateImg 2.5s ease-in-out alternate infinite;
 
 }
 
 
-@keyframes a {
+@keyframes rotateImg {
 
     0% {
         transform: rotate(5deg);
@@ -538,9 +538,6 @@ section h1::before {
 .slider {
     width: 650px;
     height: 500px;
-    /*border: 1px solid black;*/
-    /*box-shadow: grey 2px 5px 10px;*/
-    /*background: rgba(0,0,0,0.15);*/
     display: flex;
     position: relative;
 
@@ -568,18 +565,6 @@ section h1::before {
     position: absolute;
 }
 
-/*#s2{
-    background: rgba(153, 19, 19, 0.64);
-}*/
-
-/*
-.slides p {
-    width: 90%;
-    text-align: center;
-    margin: 125px -25px 55px 20px;
-    position: absolute;
-}
-*/
 .slides p {
     width: 87%;
     text-align: center;
@@ -677,18 +662,25 @@ section h1::before {
 .contact-content{
     display: flex;
 }
+.contact h1 {
+    margin-left: 5%;
+}
 .contact .headerline{
-    background: #ff4568;
-    width: 100%;
+    background: rgba(255, 69, 104, 0.51);
+    width: 90%;
+    right: 0;
     height: 1px;
     margin: 0 0 1% 0;
+    transform: translate(67px, 6px);
 }
 .contact .social-detail{
     height: max-content;
+    margin-right: 5%;
 }
 .contact .social-media{
     display: flex;
     transform: translate(76%, 0px);
+    margin-right: 5%;
 
 }
 .social-media img{
@@ -696,6 +688,9 @@ section h1::before {
     margin-right: 20px;
     border-radius: 100%;
     border: 1px solid grey;
+    transition: all 0.3s ease;
+
+
 }
 
 .contact .left{
@@ -703,11 +698,26 @@ section h1::before {
 }
 .contact .right{
     width: 45%;
+    margin: 3% 5% 5%;
 }
 .contactimg{
     width: 90%;
+    position: relative;
     border-radius: 100%;
+    overflow: hidden;
+    animation: a 2.5s ease-in-out alternate infinite;
 
+}
+@keyframes a {
+
+    0% {
+        transform: rotate(3deg);
+
+    }
+    100% {
+        transform: rotate(-3deg);
+
+    }
 }
 .social-media .round img:hover{
     transform: scale(1.05);
@@ -741,19 +751,17 @@ section h1::before {
     padding: 10px;
     border-style: hidden;
     position: absolute;
-    transform: translate(165%, 0);
+    transform: translate(140%, 0);
     box-shadow: darkgrey 2px 5px 6px;
-    transition: all 0.6s;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
 }
-.contact-content .btnSent:hover {
-    background: transparent;
+.btnSent:hover{
     cursor: pointer;
-    border: #000000 2px solid;
-    /*text-shadow: #4d4d4d 2px 4px 5px;*/
-    /*transform: translate(0px, -6px);*/
-    color:black ;
-}
+    background: transparent;
+    border: 1px solid black;
 
+}
 
 
 
@@ -848,7 +856,13 @@ section h1::before {
         margin-left: -1200px;
     }
 }
+@media (max-width: 1180px)  and (min-width: 1040px) {
 
+    .contact .social-media {
+        transform: translate(73%, 0px);
+    }
+
+}
 @media (max-width: 1180px)  and (min-width: 1080px) {
     .skill-content .skillimg {
         width: 600px;
@@ -913,6 +927,7 @@ section h1::before {
         margin-left: 35px;
     }
 
+
 }
 
 @media (max-width: 1040px) and (min-width: 950px) {
@@ -965,6 +980,13 @@ section h1::before {
 
     .skill-content .left {
         margin-left: 35px;
+    }
+    .contact .social-media {
+        transform: translate(70%, 0px);
+    }
+    .contact-content .btnSent {
+        transform: translate(102%, 0);
+
     }
 }
 
@@ -1067,6 +1089,34 @@ section h1::before {
         margin: 5%;
 
     }
+
+    .contact-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 5% 5% 0;
+    }
+    .contact .right,  .contact .left  {
+        width: 100%;
+        margin: 5% 5% 5% 5%;
+    }
+    .headerline{
+        display: none;
+    }
+    .contact .social-media div{
+        margin: 5%;
+    }
+    .contact .social-media {
+        position: absolute;
+        display: block;
+        justify-content: space-between;
+        right: 10%;
+        margin: 5%;
+
+
+    }
+
 
 }
 
@@ -1384,6 +1434,9 @@ section h1::before {
     .header {
         width: 80vw;
     }
+    .contact-content .btnSent {
+        transform: translate(65%, 0);
+    }
 }
 
 @media (max-width: 475px) {
@@ -1468,6 +1521,9 @@ section h1::before {
     #radio3:checked ~ .first {
         margin-left: -580px;
     }
+    .contact-content .btnSent {
+        transform: translate(35%, 0);
+    }
 }
 
 @media (max-width: 380px) and (min-width: 320px) {
@@ -1551,6 +1607,9 @@ section h1::before {
 
     #radio3:checked ~ .first {
         margin-left: -500px;
+    }
+    .contact-content .btnSent {
+        transform: translate(17%, 0);
     }
 
 }
