@@ -656,16 +656,19 @@ section h1::before {
 
 
 /*contact section styling*/
-.contact{
-    background:#fdfdfd;
+.contact {
+    background: #fdfdfd;
 }
-.contact-content{
+
+.contact-content {
     display: flex;
 }
+
 .contact h1 {
     margin-left: 5%;
 }
-.contact .headerline{
+
+.contact .headerline {
     background: rgba(255, 69, 104, 0.51);
     width: 90%;
     right: 0;
@@ -673,17 +676,20 @@ section h1::before {
     margin: 0 0 1% 0;
     transform: translate(67px, 6px);
 }
-.contact .social-detail{
+
+.contact .social-detail {
     height: max-content;
     margin-right: 5%;
 }
-.contact .social-media{
+
+.contact .social-media {
     display: flex;
     transform: translate(76%, 0px);
     margin-right: 5%;
 
 }
-.social-media img{
+
+.social-media img {
     width: 45px;
     margin-right: 20px;
     border-radius: 100%;
@@ -693,14 +699,16 @@ section h1::before {
 
 }
 
-.contact .left{
+.contact .left {
     width: 55%;
 }
-.contact .right{
+
+.contact .right {
     width: 45%;
     margin: 3% 5% 5%;
 }
-.contactimg{
+
+.contactimg {
     width: 90%;
     position: relative;
     border-radius: 100%;
@@ -708,6 +716,7 @@ section h1::before {
     animation: a 2.5s ease-in-out alternate infinite;
 
 }
+
 @keyframes a {
 
     0% {
@@ -719,29 +728,34 @@ section h1::before {
 
     }
 }
-.social-media .round img:hover{
+
+.social-media .round img:hover {
     transform: scale(1.05);
     cursor: pointer;
     border-style: none;
     box-shadow: grey 2px 5px 5px;
 }
+
 .contact .contact-content .field {
     width: 100%;
     padding: 10px;
 }
-.contact .message textarea{
+
+.contact .message textarea {
     resize: none;
 }
-.contact .field input , .contact .message textarea{
+
+.contact .field input, .contact .message textarea {
     height: 100%;
     width: 100%;
     border: 1px solid lightgrey;
-    padding:5px 15px 5px 15px;
+    padding: 5px 15px 5px 15px;
     border-radius: 8px;
     outline: none;
     font-size: 17px;
     font-family: Poppins;
 }
+
 .contact-content .btnSent {
     width: max-content;
     height: 5vh;
@@ -756,7 +770,8 @@ section h1::before {
     border: 1px solid transparent;
     transition: all 0.3s ease;
 }
-.btnSent:hover{
+
+.btnSent:hover {
     cursor: pointer;
     background: transparent;
     border: 1px solid black;
@@ -764,22 +779,17 @@ section h1::before {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*footer section styling*/
+footer{
+    position: relative;
+    background: #DC143C;
+    color: #eeeeee;
+    padding: 1%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 2;
+}
 
 
 
@@ -856,6 +866,7 @@ section h1::before {
         margin-left: -1200px;
     }
 }
+
 @media (max-width: 1180px)  and (min-width: 1040px) {
 
     .contact .social-media {
@@ -863,6 +874,7 @@ section h1::before {
     }
 
 }
+
 @media (max-width: 1180px)  and (min-width: 1080px) {
     .skill-content .skillimg {
         width: 600px;
@@ -981,9 +993,11 @@ section h1::before {
     .skill-content .left {
         margin-left: 35px;
     }
+
     .contact .social-media {
         transform: translate(70%, 0px);
     }
+
     .contact-content .btnSent {
         transform: translate(102%, 0);
 
@@ -1097,16 +1111,20 @@ section h1::before {
         flex-wrap: wrap;
         margin: 0 5% 5% 0;
     }
-    .contact .right,  .contact .left  {
+
+    .contact .right, .contact .left {
         width: 100%;
         margin: 5% 5% 5% 5%;
     }
-    .headerline{
+
+    .headerline {
         display: none;
     }
-    .contact .social-media div{
+
+    .contact .social-media div {
         margin: 5%;
     }
+
     .contact .social-media {
         position: absolute;
         display: block;
@@ -1434,6 +1452,7 @@ section h1::before {
     .header {
         width: 80vw;
     }
+
     .contact-content .btnSent {
         transform: translate(65%, 0);
     }
@@ -1521,6 +1540,7 @@ section h1::before {
     #radio3:checked ~ .first {
         margin-left: -580px;
     }
+
     .contact-content .btnSent {
         transform: translate(35%, 0);
     }
@@ -1608,8 +1628,15 @@ section h1::before {
     #radio3:checked ~ .first {
         margin-left: -500px;
     }
+
     .contact-content .btnSent {
         transform: translate(17%, 0);
+    }
+    footer{
+
+        margin-top: 30px;
+        font-size: 8px;
+        line-height: 2;
     }
 
 }
