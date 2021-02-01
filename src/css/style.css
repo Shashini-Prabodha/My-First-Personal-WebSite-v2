@@ -696,7 +696,6 @@ section h1::before {
     border: 1px solid grey;
     transition: all 0.3s ease;
 
-
 }
 
 .contact .left {
@@ -780,7 +779,7 @@ section h1::before {
 
 
 /*footer section styling*/
-footer{
+footer {
     position: relative;
     background: #DC143C;
     color: #eeeeee;
@@ -792,24 +791,8 @@ footer{
 }
 
 
-
-
-
-
-
-
 /*responsive media query strating*/
 
-@media (max-width: 1270px) {
-    .projects .project-content {
-        position: relative;
-    }
-
-    .project-content .card {
-        width: calc(50% - 20px);
-        margin-bottom: 20px;
-    }
-}
 
 @media (max-width: 1440px) {
 
@@ -828,6 +811,17 @@ footer{
 @media (max-width: 1420px) and (min-width: 1370px) {
     .home .home-content .text2 {
         font-size: 72px;
+    }
+}
+
+@media (max-width: 1270px) {
+    .projects .project-content {
+        position: relative;
+    }
+
+    .project-content .card {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
     }
 }
 
@@ -914,7 +908,6 @@ footer{
     }
 }
 
-
 @media (max-width: 1044px) and (min-width: 950px) {
 
     .aboutme-content .left img {
@@ -923,7 +916,6 @@ footer{
     }
 
 }
-
 
 @media (min-width: 1040px) and (max-width: 1370px) {
     .navbar .max-width {
@@ -938,7 +930,6 @@ footer{
     .skill-content .left {
         margin-left: 35px;
     }
-
 
 }
 
@@ -1065,6 +1056,9 @@ footer{
         font-size: 30px;
         font-weight: 500;
     }
+    .aboutme .aboutme-content .column {
+        width: 100%;
+    }
 
     .aboutme .aboutme-content .left {
         display: flex;
@@ -1073,14 +1067,16 @@ footer{
         width: fit-content;
     }
 
-    .aboutme .aboutme-content .column {
-        width: 50%;
+    .aboutme .aboutme-content .right {
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*margin: 0 auto 60px;*/
+        flex: 100%;
     }
 
-    .aboutme .aboutme-content .left {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
+    .aboutme-content .left img {
+        width: 350px;
+        height: 380px;
     }
 
     .aboutme .aboutme-content .right {
@@ -1101,7 +1097,6 @@ footer{
 
     .service .title {
         margin: 5%;
-
     }
 
     .contact-content {
@@ -1131,10 +1126,7 @@ footer{
         justify-content: space-between;
         right: 10%;
         margin: 5%;
-
-
     }
-
 
 }
 
@@ -1179,7 +1171,7 @@ footer{
 
 }
 
-@media (max-width: 850px)  and (min-width: 720px) {
+@media (max-width: 850px)  and (min-width: 745px) {
     .serviceimg {
         display: none;
     }
@@ -1202,6 +1194,29 @@ footer{
 
     #radio3:checked ~ .first {
         margin-left: -1160px;
+    }
+
+}
+
+@media (max-width: 745px)  and (min-width: 645px) {
+    .slider {
+        width: 520px;
+    }
+
+    .slide {
+        width: 520px;
+    }
+
+    #radio2:checked ~ .first {
+        margin-left: -520px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -1040px;
+    }
+
+    .serviceimg {
+        display: none;
     }
 
 }
@@ -1254,7 +1269,7 @@ footer{
 
 }
 
-@media (max-width: 600px) and (min-width: 550px) {
+@media (max-width: 645px) and (min-width: 600px) {
     .slider {
         width: 450px;
     }
@@ -1263,6 +1278,16 @@ footer{
         width: 450px;
     }
 
+    #radio2:checked ~ .first {
+        margin-left: -450px;
+    }
+
+    #radio3:checked ~ .first {
+        margin-left: -900px;
+    }
+}
+
+@media (max-width: 645px) and (min-width: 550px) {
     .manual-btn {
         transform: translate(-90px, 0);
     }
@@ -1276,22 +1301,37 @@ footer{
         width: 78vw;
     }
 
+}
+
+@media (max-width: 600px) and (min-width: 550px) {
+    .slider {
+        width: 410px;
+    }
+
+    .slide {
+        width: 410px;
+    }
+
+    .serviceimg {
+        display: none;
+    }
+
     #radio2:checked ~ .first {
-        margin-left: -450px;
+        margin-left: -410px;
     }
 
     #radio3:checked ~ .first {
-        margin-left: -900px;
+        margin-left: -820px;
     }
 }
 
 @media (max-width: 550px) and (min-width: 475px) {
     .slider {
-        width: 390px;
+        width: 360px;
     }
 
     .slide {
-        width: 390px;
+        width: 360px;
     }
 
     .manual-btn {
@@ -1308,11 +1348,11 @@ footer{
     }
 
     #radio2:checked ~ .first {
-        margin-left: -390px;
+        margin-left: -360px;
     }
 
     #radio3:checked ~ .first {
-        margin-left: -780px;
+        margin-left: -720px;
     }
 }
 
@@ -1395,12 +1435,6 @@ footer{
 
 }
 
-/*@media (max-width: 600px) and (min-width: 490px) {
-    .aboutme-content .left img{
-        width: 300px;
-        height: 300px;
-    }
-}*/
 @media (max-width: 490px) and (min-width: 380px) {
     /*.aboutme-content .left img{
         width: 260px;
@@ -1421,11 +1455,11 @@ footer{
 
 @media (max-width: 490px) and (min-width: 420px) {
     .slider {
-        width: 330px;
+        width: 300px;
     }
 
     .slide {
-        width: 330px;
+        width: 300px;
     }
 
     .manual-btn {
@@ -1437,11 +1471,11 @@ footer{
     }
 
     #radio2:checked ~ .first {
-        margin-left: -330px;
+        margin-left: -300px;
     }
 
     #radio3:checked ~ .first {
-        margin-left: -660px;
+        margin-left: -600px;
     }
 
     .web {
@@ -1502,12 +1536,18 @@ footer{
         margin-left: 0;
     }
 
+    .title {
+        font-size: 42px;
+    }
+
     .slider {
-        width: 290px;
+        width: 260px;
     }
 
     .slide {
-        width: 290px;
+        width: 260px;
+        border-radius: 50px 0 50px 0;
+
     }
 
     .manual-btn {
@@ -1515,11 +1555,11 @@ footer{
     }
 
     .header {
-        width: 76vw;
+        width: 80vw;
     }
 
     .web {
-        left: 61px;
+        left: 40px;
         font-size: 16px;
     }
 
@@ -1534,16 +1574,24 @@ footer{
     }
 
     #radio2:checked ~ .first {
-        margin-left: -290px;
+        margin-left: -260px;
     }
 
     #radio3:checked ~ .first {
-        margin-left: -580px;
+        margin-left: -520px;
     }
 
     .contact-content .btnSent {
         transform: translate(35%, 0);
     }
+
+    .navigation-manual {
+
+        bottom: 6px;
+        left: -102px;
+    }
+
+
 }
 
 @media (max-width: 380px) and (min-width: 320px) {
@@ -1632,7 +1680,8 @@ footer{
     .contact-content .btnSent {
         transform: translate(17%, 0);
     }
-    footer{
+
+    footer {
 
         margin-top: 30px;
         font-size: 8px;
