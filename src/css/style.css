@@ -110,13 +110,14 @@
 .home .home-content .text2 span {
     font-size: 78px;
     font-weight: 600;
-    margin-left: -3px;
     color: white;
     margin: 0;
     opacity: 0;
     animation: animat .5s linear forwards;
 }
-
+.home .home-content .text2 .spansp{
+    margin-right: 20px;
+}
 @keyframes animat {
     0% {
         opacity: 0;
@@ -287,10 +288,21 @@
 
 /*about me section styling*/
 .aboutme {
-    padding: 100px 0;
+    padding: 50px 0;
     display: block;
     background: #FDFDFD;
-
+}
+.aboutme aside{
+    background: #dad0d11f;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    z-index: 0;
+    left: 25%;
+    /* top: 0; */
+    transform: translate(-50%,278%);
+    margin: auto;
+    border-radius: 113px 44px 66px;
 }
 
 .aboutme h1 {
@@ -388,22 +400,7 @@ section h1::before {
 }
 
 
-/*skill section styling*/
-
-.skill-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 5% 5% 0;
-}
-
-.skills h1 {
-    text-align: right;
-    margin-right: 5%;
-    z-index: 2;
-    transform: translate(0px, 50px);
-}
+/*
 
 .skill-content .left div {
     width: 80%;
@@ -480,8 +477,8 @@ section h1::before {
     border: 1px solid transparent;
     background: crimson;
     position: absolute;
-    /*left: 0;*/
-    /*margin: 9%;*/
+    !*left: 0;*!
+    !*margin: 9%;*!
 
 }
 
@@ -508,12 +505,118 @@ section h1::before {
 .skill-content .bar6::before {
     width: 1%;
 }
+*/
+
+/*skill section styling*/
+.skill{
+    padding: 50px 0;
+}
+.skill-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+    margin: 0 5% 5% 0;
+
+}
+
+.skills h1 {
+    text-align: right;
+    margin-right: 5%;
+    z-index: 2;
+    transform: translate(0px, 50px);
+}
+
+.skill-content .left {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 0 50px 10px;
+}
+.skill-content .right {
+    width: 40%;
+}
+.skill-content .right img {
+    width: 545px;
+    height: 545px;
+    object-fit: cover;
+}
+
+.wrapper{
+
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+}
+.wrapper .card{
+    width: calc(33% - 20px);
+    background: #f7f7f7;
+    box-shadow: #959595 2px 5px 12px;
+    height: 250px;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wrapper .card .circle{
+    height: 130px;
+    width: 130px;
+    /*border: 8px solid crimson;*/
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.2s ease;
+
+}
+.card .circle .box, .card .circle .box span
+{
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+
+.card .circle .box{
+    width: 100%;
+    height: 100%;
+    /*background: aqua;*/
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.card .circle:hover {
+    transform:scale(1.05);
+    cursor: default;
+}
+
+.card .circle .box span {
+    font-size: 25px;
+    font-weight: 600;
+    color: #8e006b;
+    transform: translate(-50%,-50%);
+}
+
+.card .text{
+    font-size: 20px;
+    font-weight: 500;
+
+}
 
 
 /*project section styling */
 
 .projects {
     background: #FDFDFD;
+    padding: 50px 0;
+
 }
 
 .project-content {
@@ -606,7 +709,7 @@ section h1::before {
 
 .service {
     background: #FDFDFD;
-
+   padding: 50px 0;
 }
 
 .service h1 {
@@ -766,6 +869,8 @@ section h1::before {
 /*contact section styling*/
 .contact {
     background: #fdfdfd;
+    padding: 50px 0;
+
 }
 
 .contact-content {
@@ -917,12 +1022,31 @@ footer {
 }
 
 @media (max-width: 1420px) and (min-width: 1370px) {
-    .home .home-content .text2 {
-        font-size: 72px;
+    .home .home-content .text2 span{
+        font-size: 69px;
+    }
+}
+
+@media (max-width: 1370px) and (min-width: 1270px) {
+    .home .home-content .text2 span{
+        font-size: 65px;
+    }
+    .back-rect {
+        width: 450px;
+        height: 450px;
+    }
+    .front-img {
+        width: 465px;
+        height: 465px;
+    }
+    .skill-content .right img {
+        width: 450px;
+        height: 450px;
     }
 }
 
 @media (max-width: 1270px) {
+
     .projects .project-content {
         position: relative;
     }
@@ -931,15 +1055,11 @@ footer {
         width: calc(50% - 20px);
         margin-bottom: 20px;
     }
-}
-
-@media (max-width: 1270px)  and (min-width: 1180px) {
-    .skill-content .skillimg {
-        width: 700px;
-        position: absolute;
-        right: -100px;
-        z-index: 1;
+    .wrapper .card{
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
     }
+    .
 }
 
 @media (max-width: 1250px) {
@@ -969,18 +1089,32 @@ footer {
     }
 }
 
-@media (max-width: 1180px)  and (min-width: 1040px) {
+@media (max-width: 1270px)  and (min-width: 1180px) {
+    .home .home-content .text2 {
+        width:430px
+    }
+    .home .home-content .text2 span{
+        font-size: 68px;
+    }
+    .skill-content .right img {
+        width: 430px;
+        height: 430px;
+    }
+}
 
+@media (max-width: 1180px)  and (min-width: 1040px) {
+    .home .home-content .text2 {
+        width:430px
+    }
+    .home .home-content .text2 span{
+        font-size: 68px;
+    }
     .contact .social-media {
         transform: translate(73%, 0px);
     }
-
-}
-
-@media (max-width: 1180px)  and (min-width: 1080px) {
-    .skill-content .skillimg {
-        width: 600px;
-
+    .skill-content .right img {
+        width: 420px;
+        height: 420px;
     }
 
 }
@@ -1025,16 +1159,10 @@ footer {
 
 }
 
-@media (min-width: 1040px) and (max-width: 1370px) {
+@media (max-width: 1370px) and (min-width: 1040px){
     .navbar .max-width {
         padding: 0 50px;
     }
-
-    .home .home-content .text2 {
-        font-size: 74px;
-        width: 500px;
-    }
-
     .skill-content .left {
         margin-left: 35px;
     }
@@ -1072,13 +1200,6 @@ footer {
         margin-bottom: 10px;
     }
 
-    .home .home-content .text2 {
-        font-size: 68px;
-        font-weight: 600;
-        color: white;
-        width: 500px;
-    }
-
     .home .home-content .text3 {
         font-size: 35px;
         font-weight: 500;
@@ -1086,11 +1207,19 @@ footer {
 
     .home .home-content .text3 span {
         font-size: 30px;
-
     }
-
+    .home .home-content .text2 {
+        width:430px
+    }
+    .home .home-content .text2 span{
+        font-size: 68px;
+    }
     .skill-content .left {
         margin-left: 35px;
+    }
+    .skill-content .right img {
+        width: 400px;
+        height: 400px;
     }
 
     .contact .social-media {
@@ -1144,10 +1273,6 @@ footer {
         display: none;
     }
 
-    .home .home-content .text2 {
-        font-size: 65px;
-    }
-
     .home .home-content .text3 {
         font-size: 42px;
         left: 28%;
@@ -1195,15 +1320,9 @@ footer {
     .aboutme h1, .skills h1, .projects h1, .service h1 {
         text-align: center;
     }
-
-    .skill-content .skillimg {
-        width: 600px;
-        position: relative;
-        z-index: 1;
-        left: 50%;
-        transform: translate(-50%);
+    .skill-content  {
+       flex-wrap: wrap;
     }
-
     .service .title {
         margin: 5%;
     }
@@ -1246,8 +1365,22 @@ footer {
     }
 }
 
-@media (max-width: 950px) and (min-width: 850px) {
+@media (max-width: 950px) and (min-width: 550px){
+    .home .home-content .text2 {
+        width:453px
+    }
+    .home .home-content .text2 span{
+        font-size: 72px;
+    }
+}
 
+@media (max-width: 950px) and (min-width: 850px) {
+.skill-content .left{
+    width: 100%;
+}
+    .skill-content .right{
+        flex: 100%;
+    }
     .serviceimg {
         width: 285px;
         transform: translate(30px, 65px);
@@ -1278,10 +1411,37 @@ footer {
         font-size: 24px;
     }
 
+
+}
+@media (max-width: 950px)  and (min-width: 745px) {
+    .wrapper{
+        width: 690px;
+    }
+
+    .wrapper .card{
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 745px)  and (min-width: 550px) {
+/*    .wrapper{*/
+/*        width: 600px;*/
+/*        flex:100%;*/
+/*    }*/
+/*.skill-content .left{*/
+/*    width: 100%;*/
+
+/*}*/
+/*    .wrapper .card{*/
+/*        width: 100%;*/
+/*    }*/
+/*    .skillimg{*/
+/*        display: none;*/
+/*    }*/
 }
 
 @media (max-width: 850px)  and (min-width: 745px) {
-    .serviceimg {
+    .serviceimg, .skillimg {
         display: none;
     }
 
@@ -1304,6 +1464,16 @@ footer {
     #radio3:checked ~ .first {
         margin-left: -1160px;
     }
+    .skill-content .left{
+        width: 100%;
+    }
+    .wrapper{
+        width: 640px;
+    }
+    .wrapper .card{
+        width: calc(50% - 15px );
+    }
+
 
 }
 
@@ -1374,6 +1544,16 @@ footer {
 
     .web {
         left: 175px;
+    }
+
+    .skill-content .left{
+        width: 100%;
+    }
+    .wrapper .card{
+        width: 100%;
+    }
+    .skillimg{
+        display: none;
     }
 
 }
@@ -1463,6 +1643,12 @@ footer {
     #radio3:checked ~ .first {
         margin-left: -720px;
     }
+    .home .home-content .text2 {
+        width:400px
+    }
+    .home .home-content .text2 span{
+        font-size: 62px;
+    }
 }
 
 @media (max-width: 790px) and (min-width: 600px) {
@@ -1526,10 +1712,6 @@ footer {
 
     .home .home-content .text1 {
         font-size: 25px;
-    }
-
-    .home .home-content .text2 {
-        font-size: 50px;
     }
 
     .home .home-content .text3 {
@@ -1602,6 +1784,12 @@ footer {
 }
 
 @media (max-width: 475px) {
+    .home .home-content .text2 {
+        width:370px
+    }
+    .home .home-content .text2 span{
+        font-size: 57px;
+    }
     .projects .project-content {
         position: relative;
         width: 100%;
@@ -1640,6 +1828,12 @@ footer {
 }
 
 @media (max-width: 425px)  and (min-width: 381px) {
+    .home .home-content .text2 {
+        width:320px
+    }
+    .home .home-content .text2 span{
+        font-size: 48px;
+    }
     .service .title {
         margin-right: 0;
         margin-left: 0;
@@ -1713,9 +1907,11 @@ footer {
     }
 
     .home .home-content .text2 {
-        font-size: 46px;
+        width:275px
     }
-
+    .home .home-content .text2 span{
+        font-size: 40px;
+    }
     .home .home-content .text3 {
         font-size: 26px;
         text-align: center;
