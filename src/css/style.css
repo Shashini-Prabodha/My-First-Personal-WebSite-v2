@@ -56,13 +56,18 @@
 .navbar .menu li {
     display: inline-block;
 }
+.navbar .menu li:hover{
+   transform: scale(1.05);
+    transition: all 0.3s ease;
+
+}
 
 .navbar .menu li a {
     color: white;
     font-size: 22px;
     font-weight: 500;
     margin-left: 40px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .navbar .menu li a:hover {
@@ -71,7 +76,8 @@
 
 .navbar.sticky .menu li a:hover {
     color: white;
-    transform: scale(1.05);
+    text-shadow: #959595 2px 2px 5px;
+
 }
 
 /*menu button styling*/
@@ -97,16 +103,101 @@
 }
 
 .home .home-content .text1 {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
-.home .home-content .text2 {
+.home .home-content .text2 span {
     font-size: 78px;
     font-weight: 600;
     margin-left: -3px;
     color: white;
+    margin: 0;
+    opacity: 0;
+    animation: animat .5s linear forwards;
 }
+
+@keyframes animat {
+    0% {
+        opacity: 0;
+        transform: rotateX(90deg);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+        filter: blur(0px);
+    }
+}
+
+.home .home-content .text2 span:nth-child(1) {
+    animation-delay: 0.20s;
+}
+
+.home .home-content .text2 span:nth-child(2) {
+    animation-delay: 0.40s;
+}
+
+.home .home-content .text2 span:nth-child(3) {
+    animation-delay: 0.60s;
+}
+
+.home .home-content .text2 span:nth-child(4) {
+    animation-delay: 0.80s;
+}
+
+.home .home-content .text2 span:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.home .home-content .text2 span:nth-child(6) {
+    animation-delay: 1.20s;
+}
+
+.home .home-content .text2 span:nth-child(7) {
+    animation-delay: 1.40s;
+}
+
+.home .home-content .text2 span:nth-child(8) {
+    animation-delay: 1.60s;
+}
+
+.home .home-content .text2 span:nth-child(9) {
+    animation-delay: 1.80s;
+}
+
+.home .home-content .text2 span:nth-child(10) {
+    animation-delay: 2s;
+}
+
+.home .home-content .text2 span:nth-child(11) {
+    animation-delay: 2.20s;
+}
+
+.home .home-content .text2 span:nth-child(12) {
+    animation-delay: 2.40s;
+}
+
+.home .home-content .text2 span:nth-child(13) {
+    animation-delay: 2.60s;
+}
+
+.home .home-content .text2 span:nth-child(14) {
+    animation-delay: 2.80s;
+}
+
+.home .home-content .text2 span:nth-child(15) {
+    animation-delay: 3s;
+}
+
+.home .home-content .text2 span:nth-child(16) {
+    animation-delay: 3.20s;
+}
+
+.home .home-content .text2 span:nth-child(17) {
+    animation-delay: 3.40s;
+}
+
 
 .home .home-content .text3 {
     font-size: 40px;
@@ -134,6 +225,8 @@
     top: 79px;
     position: absolute;
     box-shadow: rgba(255, 21, 65, 0.42) 0px 8px 600px;
+    animation: animateimg 2s;
+
 }
 
 .front-img {
@@ -146,6 +239,21 @@
     background-size: cover;
     background-position: center;
     transform: translateY(79px);
+    animation: animateimg 2s;
+
+}
+
+@keyframes animateimg {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+
+    }
 }
 
 .button {
@@ -1056,6 +1164,7 @@ footer {
         font-size: 30px;
         font-weight: 500;
     }
+
     .aboutme .aboutme-content .column {
         width: 100%;
     }
