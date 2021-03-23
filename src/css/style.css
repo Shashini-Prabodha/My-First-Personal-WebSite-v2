@@ -314,7 +314,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 5%;
+    /*margin: 5%;*/
 }
 
 .aboutme-content .right {
@@ -681,27 +681,32 @@ section h1::before {
 }
 
 .projects .btnViewMore {
-    font-size: 20px;
     left: 50%;
     transform: translate(-50%);
     border-radius: 50px 0 50px 0;
-    font-family: Beach;
     border: 2px solid crimson;
     background: crimson;
-    color: white;
     width: 150px;
     height: 35px;
     position: relative;
     padding: 5px;
     margin-bottom: 30px;
     transition: all 0.3s ease;
+    cursor: pointer;
+}
+.projects .btnViewMore a{
+    font-size: 20px;
+    font-family: Beach;
+    color: white;
 
 }
 
 .btnViewMore:hover {
     background: transparent;
-    color: crimson;
 
+}
+.projects .btnViewMore a:hover{
+    color: crimson;
 }
 
 /*service section styling*/
@@ -1002,8 +1007,32 @@ footer {
     font-size: 10px;
     line-height: 2;
 }
+#cornerimg,#cornerimg2,#cornerimg5{
+    width: 200px;
+    height: 200px;
+    right: -80px;
+    transform: rotate(-30deg);
+    position: absolute;
 
+}
+.cornerimageblue{
+    width: 100%;
+    height: 90%;
 
+}
+.cornerimage{
+    width: 80%;
+    height: 98%;
+
+}
+#cornerimghome,#cornerimg3,#cornerimg4 {
+    width: 200px;
+    height: 200px;
+    left: -91px;
+    transform: rotate(70deg);
+    position: absolute;
+
+}
 /*responsive media query strating*/
 
 
@@ -1234,7 +1263,7 @@ footer {
 
 @media (max-width: 950px) {
     .max-width {
-        padding: 0 50px;
+        padding: 0 25px;
     }
 
     .menu_button {
