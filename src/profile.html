@@ -7,14 +7,19 @@
     <link href="asserts/fonts/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="asserts/icon/splogo.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+
     <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../New%20folder/My-First-Personal-WebSite-v2/src/js/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
     <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
     </style>
 </head>
 <body>
@@ -107,7 +112,8 @@
 
     </div>
     <article id="cornerimg">
-        <img src="asserts/icon/depositphotos_73227247-stock-illustration-flower-of-iris-drawing-by.jpg" alt="cornerimg" class="cornerimageblue">
+        <img src="asserts/icon/depositphotos_73227247-stock-illustration-flower-of-iris-drawing-by.jpg" alt="cornerimg"
+             class="cornerimageblue">
     </article>
 </section>
 
@@ -189,7 +195,8 @@
         </div>
     </div>
     <article id="cornerimg2">
-        <img src="asserts/icon/depositphotos_73227247-stock-illustration-flower-of-iris-drawing-by.jpg" alt="cornerimg" class="cornerimageblue">
+        <img src="asserts/icon/depositphotos_73227247-stock-illustration-flower-of-iris-drawing-by.jpg" alt="cornerimg"
+             class="cornerimageblue">
     </article>
 </section>
 
@@ -320,7 +327,8 @@
                 </div>
                 <div class="round">
                     <div class="stack">
-                        <a href="https://stackoverflow.com/users/12910819/shashini-prabodha?tab=profile" target="_blank">
+                        <a href="https://stackoverflow.com/users/12910819/shashini-prabodha?tab=profile"
+                           target="_blank">
                             <img src="asserts/icon/stack_overflow_100px.png" alt="stacklogo">
                         </a>
                     </div>
@@ -368,12 +376,96 @@
 
 </section>
 
+
+
+
+<!-- Swiper -->
+<!--<section class="swiperSection" style="z-index: 90">
+    <div class="swiper-container mySwiper" style="z-index: 90">
+        <div class="swiper-wrapper"  style="z-index: 95">
+            <div class="swiper-slide" style="z-index: 97">
+                <img src="https://swiperjs.com/demos/images/nature-1.jpg" style="z-index: 97;display: block;
+    width: 100%;"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" style="z-index: 97; display: block;
+    width: 100%;"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-3.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-4.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-5.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-6.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-7.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-8.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-9.jpg"/>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+</section>-->
+
+<div class="gallery">
+    <div class="gallery-container">
+        <img class="gallery-item gallery-item-1" src="http://fakeimg.pl/300/?text=1" data-index="1">
+        <img class="gallery-item gallery-item-2" src="http://fakeimg.pl/300/?text=2" data-index="2">
+        <img class="gallery-item gallery-item-3" src="http://fakeimg.pl/300/?text=3" data-index="3">
+        <img class="gallery-item gallery-item-4" src="http://fakeimg.pl/300/?text=4" data-index="4">
+        <img class="gallery-item gallery-item-5" src="http://fakeimg.pl/300/?text=5" data-index="5">
+    </div>
+    <div class="gallery-controls"></div>
+</div>
+
+<script src="carousel.js"></script>
+
 <!-- footer start-->
 <footer>
     Copyright © 2020 All right reserved</br> Website Powered BY SHASHINI PRABODHA
 </footer>
 <script src="js/script.js"></script>
+<script src="../New%20folder/My-First-Personal-WebSite-v2/src/js/snowfall.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            zIndex: 99999,
+            slideShadows: true,
+        },
+        loop: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+
+    });
+</script>
 </body>
 </html>
 

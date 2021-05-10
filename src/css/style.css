@@ -9,6 +9,43 @@
 
 }
 
+.swiperSection {
+
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+
+.swiperSection .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.swiperSection .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+
+}
+
+.swiperSection .swiper-slide img {
+
+    border: solid 5px black;
+
+}
+
 /*navbar styling*/
 .navbar {
     /*background: crimson;*/
@@ -20,8 +57,9 @@
 }
 
 .navbar.sticky {
-    background: crimson;
+    /*background: crimson;*/
     padding: 15px 0;
+    background-image: linear-gradient(to right, #dc143c, #e0004e, #e10060, #e00072, #dc0084, #dc0084, #dc0084, #dc0084, #e00072, #e10060, #e0004e, #dc143c);
 }
 
 .navbar .logo a {
@@ -32,7 +70,7 @@
 }
 
 .navbar .logo a span {
-    color: crimson;
+    color: #dc143c;
     transition: all 0.3s ease;
 }
 
@@ -71,7 +109,7 @@
 }
 
 .navbar .menu li a:hover {
-    color: crimson;
+    color: #dc143c;
 }
 
 .navbar.sticky .menu li a:hover {
