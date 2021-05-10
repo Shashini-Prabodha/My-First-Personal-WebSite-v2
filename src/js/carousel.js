@@ -1,6 +1,6 @@
 const galleryContainer = document.querySelector('.gallery-container');
 const galleryControlsContainer = document.querySelector('.gallery-controls');
-const galleryControls = ['previous', 'next'];
+const galleryControls = ['previous', '','next'];
 const galleryItems = document.querySelectorAll('.gallery-item');
 
 class Carousel {
@@ -33,18 +33,18 @@ class Carousel {
     } else {
       this.carouselArray.push(this.carouselArray.shift());
     }
-    
+
     this.updateGallery();
   }
 
   // Construct the carousel navigation
   // setNav() {
-    // galleryContainer.appendChild(document.createElement('ul')).className = 'gallery-nav';
+  // galleryContainer.appendChild(document.createElement('ul')).className = 'gallery-nav';
 
-    // this.carouselArray.forEach(item => {
-    //   const nav = galleryContainer.lastElementChild;
-    //   nav.appendChild(document.createElement('li'));
-    // }); 
+  // this.carouselArray.forEach(item => {
+  //   const nav = galleryContainer.lastElementChild;
+  //   nav.appendChild(document.createElement('li'));
+  // });
   // }s
 
   // Construct the carousel controls
@@ -55,39 +55,39 @@ class Carousel {
       document.querySelector(`.gallery-controls-${control}`).innerText = control;
     });
   }
- 
+
   // Add a click event listener to trigger setCurrentState method to rearrange carousel
-  // useControls() {
-  //   const triggers = [...galleryControlsContainer.childNodes];
-  //
-  //   triggers.forEach(control => {
-  //     control.addEventListener('click', e => {
-  //       e.preventDefault();
-  //
-  //       if (control.className == 'gallery-controls-add') {
-  //         const newItem = document.createElement('img');
-  //         const latestItem = this.carouselArray.length;
-  //         const latestIndex = this.carouselArray.findIndex(item => item.getAttribute('data-index') == this.carouselArray.length)+1;
-  //
-  //         // Assign the necessary properties for new gallery item
-  //         Object.assign(newItem,{
-  //           className: 'gallery-item',
-  //           src: `http://fakeimg.pl/300/?text=${this.carouselArray.length+1}`
-  //         });
-  //         newItem.setAttribute('data-index', this.carouselArray.length+1);
-  //
-  //         // Then add it to the carouselArray and update the gallery
-  //         this.carouselArray.splice(latestIndex, 0, newItem);
-  //         document.querySelector(`[data-index="${latestItem}"]`).after(newItem);
-  //         this.updateGallery();
-  //
-  //       } else {
-  //         this.setCurrentState(control);
-  //       }
-  //
-  //     });
-  //   });
-  // }
+  useControls() {
+    const triggers = [...galleryControlsContainer.childNodes];
+
+    triggers.forEach(control => {
+      control.addEventListener('click', e => {
+        e.preventDefault();
+
+        if (control.className == 'gallery-controls-add') {
+         /* const newItem = document.createElement('img');
+          const latestItem = this.carouselArray.length;
+          const latestIndex = this.carouselArray.findIndex(item => item.getAttribute('data-index') == this.carouselArray.length)+1;
+
+          // Assign the necessary properties for new gallery item
+          Object.assign(newItem,{
+            className: 'gallery-item',
+            src: `http://fakeimg.pl/300/?text=${this.carouselArray.length+1}`
+          });
+          newItem.setAttribute('data-index', this.carouselArray.length+1);
+
+          // Then add it to the carouselArray and update the gallery
+          this.carouselArray.splice(latestIndex, 0, newItem);
+          document.querySelector(`[data-index="${latestItem}"]`).after(newItem);
+          this.updateGallery();*/
+
+        } else {
+          this.setCurrentState(control);
+        }
+
+      });
+    });
+  }
 
 }
 

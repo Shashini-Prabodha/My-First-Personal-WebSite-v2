@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        body > div {
+            border-radius: 100%;
+            border: grey 15px solid;
+            width: 30vw;
+            height: 60vh;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        div > div {
+            border-radius: 100%;
+            border: orangered 16px solid;
+            width: 28vw;
+            height: 56vh;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        article {
+            width: 98vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        article > section {
+            position: absolute;
+            border-radius: 100%;
+            font-size: 50px;
+            text-align: center;
+            width: 30vw;
+            height: 60vh;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        body > article:nth-child(2) > section {
+            background: linear-gradient(-45deg, #ffffff, #31e207, #13c4f1);
+        }
+
+        body > article:nth-child(4) > section {
+            background: cornflowerblue;
+        }
+
+        body > article:nth-child(6) > section {
+            background: tomato;
+
+        }
+
+        h2 {
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            text-align: center;
+            color: white;
+            margin: auto;
+        }
+
+        h2:nth-child(3) {
+            width: max-content;
+            height: max-content;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div></div>
+</div>
+<article>
+    <section>
+        <h2>Hello</h2>
+    </section>
+</article>
+<article></article>
+<article>
+    <section>
+        <h2>Welcome To</h2>
+    </section>
+</article>
+<article></article>
+
+<article>
+    <section>
+        <h2>Institute of Software Engineering</h2>
+    </section>
+
+</article>
+
+
+</body>
+</html>

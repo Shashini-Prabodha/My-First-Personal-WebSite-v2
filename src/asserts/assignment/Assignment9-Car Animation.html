@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Animation</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        main {
+            width: 100vw;
+            height: 500px;
+            position: relative;
+            background: url("asserts/sky.jpg");
+            background-size: cover;
+
+        }
+
+        section {
+            width: max-content;
+            height: 300px;
+            position: absolute;
+            top: 250px;
+
+            animation-name: buildinganimate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        section>div{
+            display: flex;
+            width: max-content;
+            height: max-content;
+
+        }
+
+        section > div:nth-child(1) {
+            height: 250px;
+        }
+
+        section > div:nth-child(2) {
+            height: 250px;
+            top:200px;
+        }
+
+        article,article>img{
+            width: 350px;
+            height: 150px;
+            top:150px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+        }
+        aside{
+            width: max-content;
+            height: 5px;
+            top:300px;
+            bottom: 0;
+            left: -11px;
+            right: 0;
+            margin: auto;
+            position: absolute;
+
+        }
+        aside>img{
+
+            animation-name: weelanimate;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            animation-direction: alternate;
+        }
+        aside>img:nth-child(1){
+            width: 65px;
+            height: 65px;
+            margin-top: 5px;
+            margin-right: 145px;
+
+        }
+        aside>img:nth-child(2){
+            width: 65px;
+            height: 65px;
+
+        }
+
+        @keyframes buildinganimate {
+            from {
+                margin-left: 0vw;
+            }
+            to {
+                margin-left: -200vw;
+            }
+        }
+        @keyframes weelanimate {
+            from {
+                transform: rotate(0deg);
+
+            }
+            to {
+                transform: rotate(-360deg);
+
+            }
+
+        }
+    </style>
+</head>
+<body>
+<main>
+</main>
+<section>
+    <div>
+        <img src="asserts/city.png">
+        <img src="asserts/city.png">
+        <img src="asserts/city.png">
+        <img src="asserts/city.png">
+    </div>
+    <div>
+        <img src="asserts/road.jpg">
+        <img src="asserts/road.jpg">
+
+    </div>
+</section>
+<article>
+    <img src="asserts/car.png">
+</article>
+<aside>
+    <img src="asserts/wheel.png">
+    <img src="asserts/wheel.png">
+</aside>
+</body>
+</html>

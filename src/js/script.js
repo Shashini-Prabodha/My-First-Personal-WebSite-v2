@@ -1,5 +1,4 @@
 
-
 $(document).ready(function () {
     $(window).scroll(function () {
         if (this.scrollY > 20) {
@@ -10,13 +9,6 @@ $(document).ready(function () {
         }
     });
 
-    //toggle menu
-});
-    $(document).ready(function () {
-        $('.navbar .menu').toggleClass("active");
-        $('.menu_button i').toggleClass("active");
-
-
     $(document).snowfall({
         image: 'asserts/icon/b.gif',
         minSize: 10,
@@ -25,6 +17,14 @@ $(document).ready(function () {
         maxSpeed: .5
     });
 
+
+});
+
+//toggle menu
+
+$('.menu_button').click(function () {
+    $('.navbar .menu').toggleClass("active");
+    $('.menu_button i').toggleClass("active");
 });
 
 
@@ -35,8 +35,8 @@ let options = {
     fill: {gradient: ['#0ff5ef', '#ac0276', "#f634e4"]}
 }
 $(window).scroll(function () {
-    if (this.scrollY >= 600 & this.scrollY <=700) {  $(".circle .bar").circleProgress(options).on('circle-animation-progress',
-        function (event, progress, stepValue) {
+    if (this.scrollY >= 600 & this.scrollY <=700) {
+        $(".circle .bar").circleProgress(options).on('circle-animation-progress', function (event, progress, stepValue) {
             $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
         });
 
@@ -59,6 +59,5 @@ $(window).scroll(function () {
             value: 0.00
         });
     }});
-
 
 

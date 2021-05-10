@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        div{
+            width: 15%;
+            height: 30%;
+            background: white;
+            position: absolute;
+        }
+        section {
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+        }
+
+        section:nth-child(1) {
+            background: red;
+            top: 0;
+            left: 0;
+        }
+        section:nth-child(2) {
+            top: 0;
+            right: 0;
+            background: green;
+        }
+        section:nth-child(3){
+            bottom: 0;
+            left: 0;
+            background: yellow;
+        }
+        section:nth-child(4){
+            bottom: 0;
+            right: 0;
+            background: deeppink;
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <div style=" border-radius: 0 0 100% 0;"></div>
+    <div style="width: 26%; height: 52%; background: white; border-radius: 100%; left: 35%; top: 25%;">
+        <section style="width: 35%; height: 35%; color: red; left: 33%; top: 33%"></section>
+    </div>
+    <div style=" border-radius: 0 0 0 100% ; left:85%; top:0%;"></div>
+</section>
+
+<section>
+    <div style=" border-radius:0 0 100% 0;"></div>
+    <div style="width: 26%; height: 52%; background: white; border-radius: 100%; left: 35%; top: 25%;">
+        <section style="width: 35%; height: 35%; color: red; left: 33%; top: 33%"></section>
+    </div>
+    <div style=" border-radius: 0 0 0 100% ; left:85%; top:0%;"></div>
+</section>
+
+<section>
+    <div style=" border-radius:0 100% 0 0; bottom: 0"></div>
+    <div style="width: 26%; height: 52%; background: white; border-radius: 100%; left: 35%; top: 25%;">
+        <section style="width: 35%; height: 35%; color: red; left: 33%; top: 33%"></section>
+    </div>
+    <div style=" border-radius: 100% 0 0 0; left:85%; bottom:0%;"></div>
+</section>
+<section>
+    <div style=" border-radius:0 100% 0 0; bottom: 0"></div>
+    <div style="width: 26%; height: 52%; background: white; border-radius: 100%; left: 35%; top: 25%;">
+        <section style="width: 35%; height: 35%; color: red; left: 33%; top: 33%"></section>
+    </div>
+    <div style=" border-radius: 100% 0 0 0 ; left:85%; bottom:0%;"></div>
+</section>
+<section style="width: 14%; height: 28%; background: white; top: 35%; left: 43%; " >
+    <div style="width: 40%; height: 45%; background: red; border-radius: 100%; left: 30%; top: 25%;"></div>
+</section>
+</body>
+</html>

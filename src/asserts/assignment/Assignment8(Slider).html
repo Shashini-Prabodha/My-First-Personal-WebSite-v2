@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        section {
+            width: 400vw;
+            height: 100vh;
+            position: absolute;
+            display: flex;
+
+            animation-name: slider;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-direction: alternate;
+            animation-delay: 1s;
+            transition: all 10s ease;
+        }
+
+        div {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        img {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        @keyframes slider {
+            /*0% {
+                margin-left: 0px;
+            }
+            25% {
+                margin-left: -100vw;
+            }
+            50% {
+                margin-left: -200vw;
+            }
+            75% {
+                margin-left: -300vw;
+            }
+            100% {
+                margin-left: -400vw;
+            }*/
+            0%,20% {
+                transform: translate(-0%);
+            }
+            25%,45% {
+                transform: translate(-25%);
+
+            }
+            50%,70% {
+                transform: translate(-50%);
+
+            }
+            75%,100% {
+                transform: translate(-75%);
+
+            }
+
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div>
+        <img src="asserts/57-572197_northern-lights-wallpaper-1080p.jpg">
+    </div>
+    <div>
+        <img src="asserts/lotus-5k-tm.jpg">
+    </div>
+    <div>
+        <img src="asserts/wallpapersden.com_astronaut-exploring-space_2048x1152.jpg">
+    </div>
+    <div>
+        <img src="asserts/high-res-background-24.jpg">
+    </div>
+    <div>
+        <img src="asserts/27651_beautiful-christmas-tree-wallpapers-47-jpg_3072x2048_h.jpg">
+    </div>
+
+</section>
+</body>
+</html>

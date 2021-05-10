@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle Transition</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        div {
+            position: absolute;
+            width: 560px;
+            height: 560px;
+            border-radius: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        div::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 100%;
+            border: 25px grey solid;
+            border-top-color: #e20036;
+            background: #ffffff;
+
+            animation-name: clockanimate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        div > article {
+            border-top: 25px #e20036 solid;
+            width: 50%;
+            height: 0;
+            left: 50%;
+            right: 0%;
+            top: 50%;
+            bottom: 50%;
+            transform-origin: left;
+            margin: auto;
+            position: absolute;
+            transform: rotate(-45deg);
+
+            animation-name: clockpinanimate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+
+
+        }
+
+        div > article:before {
+            content: "";
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            background: #e20036;
+            left: 88%;
+            top: -35px;
+
+
+            animation-name: clockpinanimate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes clockanimate {
+            from {
+
+            }
+            to {
+                transform: rotate(360deg);
+
+            }
+        }
+
+        @keyframes clockpinanimate {
+            from {
+
+            }
+            to {
+                transform: rotate(315deg);
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <article>
+
+    </article>
+</div>
+</body>
+</html>

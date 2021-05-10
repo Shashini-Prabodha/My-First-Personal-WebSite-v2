@@ -1,73 +1,57 @@
-.bg-color {
-    background-color: #212529;
-}
 
-.home {
-    height: 60vh;
-    /*background: url("../asserts/icon/home-side-pic.png");*/
-}
-
-.home-content {
-    /*background: url("../asserts/icon/.png");*/
-}
-
-.projects {
-    /*padding: 100px 0;*/
-}
-
-
-.project-content .card{
+.projects .project-content .card {
     position: relative;
 }
 
-.box {
+.projects .box {
     width: 300px;
     height: 100%;
-    background: #8e006b;
+    background: crimson;
     position: relative;
-    margin: 10px;
+    /*margin: 10px;*/
     overflow: hidden;
     transition: all 2s ease;
 
 }
 
-.card {
+.projects .card {
     margin-bottom: 5%;
+    overflow: hidden;
 }
 
-.box div {
+.projects .box div {
     overflow: hidden;
     transition: all 2s ease;
 }
 
-.box:hover {
+.projects .box:hover {
     overflow: hidden;
     transform: scale(1.2);
     transition: all 2s ease;
 
 }
 
-.card h2 {
+.projects .card h2 {
     position: relative;
     bottom: 2px;
     left: 35%;
 }
 
-.card .details h3 {
+.projects .card .details h3 {
     font-family: "Roboto Slab";
     text-align: center;
     padding: 25px;
     font-size: 25px;
 }
 
-.card:hover .details {
+.projects .card:hover .details {
     transform: scaleY(1);
 }
 
-.details {
+.projects .details {
     width: 90%;
     height: 85%;
-    background: rgba(14, 14, 14, 0.87);
+    background: rgba(36, 35, 35, 0.87);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -78,30 +62,83 @@
     color: white;
     transform: scaleY(0);
     transition: transform .5s;
+    border: #e6e6e630 20px solid;
+    overflow: hidden;
 }
 
-.details_content {
-    padding: 10px;
+.projects .details_content {
+    padding: 25px;
     align-content: center;
     top: 50px;
     position: absolute;
+    overflow: hidden;
+
 }
 
-.details_content h3 {
+.projects .details_content h3 {
     color: #ff4277;
 }
 
-.details_content p {
+.projects .details_content p {
     font-size: 15px;
+    padding-top: 30px;
+}
+
+.projects .details_content a {
+    color: white;
+    font-size: 15px;
+    font-family: 'Harrington';
+    text-decoration: underline;
+
+}
+
+.projects .card .box div {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    text-align: end;
+}
+
+.pro4 {
+    background: url("../asserts/icon/as1.jpg");
+}
+
+.pro5 {
+    background: url("../asserts/icon/as2.jpg");
+}
+
+.pro6 {
+    background: url("../asserts/icon/as3.jpg");
+}
+
+.pro7 {
+    background: url("../asserts/icon/as4.jpg");
+}
+
+.pro8 {
+    background: url("../asserts/icon/as5.jpg");
+}
+
+.pro9 {
+    background: url("../asserts/icon/as6.jpg");
+}
+
+.pro10 {
+    background: url("../asserts/icon/as7.jpg");
+}
+
+.pro11 {
+    background: url("../asserts/icon/as8.jpg");
 }
 
 @media (max-width: 380px) and (min-width: 320px) {
-    .card .details_content h3 {
+    .projects .card .details_content h3 {
         font-size: 18px;
 
     }
 
-    .details_content p {
+    .projects .details_content p {
         font-size: 10px;
     }
 }
