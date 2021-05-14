@@ -313,7 +313,7 @@
         transform: scale(1);
 
     }
-    100%{
+    100% {
         opacity: 1;
 
     }
@@ -771,12 +771,28 @@ section h1::before {
 
 }
 
-#btnViewMore:hover {
-    background: transparent;
-    color: crimson !important;
+.projects .btnViewMore {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+
+}
+
+.projects .btnViewMore a {
+
+    color: white;
+    font-family: "Times New Roman";
+}
+
+.btnViewMore:hover {
     border: 2px solid crimson;
+    background: transparent;
+}
 
-
+.btnViewMore a:hover {
+    color: crimson !important;
 }
 
 /*service section styling*/
@@ -804,7 +820,7 @@ section h1::before {
     right: 30px;
     z-index: 1;
     transform: translate(1px, -30px);
-    animation: rotateImg 2.5s ease-in-out alternate infinite;
+    animation: rotateImg 3s ease-in-out alternate ;
 
 }
 
@@ -988,6 +1004,7 @@ section h1::before {
 
 .contact .left {
     width: 55%;
+    overflow: hidden;
 }
 
 .contact .right {
@@ -1103,6 +1120,43 @@ footer {
 @media (max-width: 1440px) and (min-width: 1370px) {
     .home .home-content .text2 span {
         font-size: 70px;
+    }
+
+    .gallery-item {
+        height: 250px;
+        width: 250px;
+    }
+
+    .gallery-item-2,
+    .gallery-item-4 {
+        height: 300px;
+        width: 300px;
+    }
+
+    .gallery-item-3 {
+        box-shadow: 0 0 30px rgba(16, 16, 16, 0.6), 0 0 60px rgba(0, 0, 0, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .gallery .gallery-container .gallery-item {
+        height: 200px;
+        width: 200px;
+    }
+
+    .gallery .gallery-container .gallery-item-2,
+    .gallery .gallery-container .gallery-item-4 {
+        height: 250px;
+        width: 250px;
+    }
+
+    .gallery .gallery-container .gallery-item-3 {
+        box-shadow: 0 0 30px rgba(16, 16, 16, 0.6), 0 0 60px rgba(0, 0, 0, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+        height: 350px;
+        width: 350px;
     }
 }
 
@@ -1251,6 +1305,8 @@ footer {
     .web {
         font-size: 24px;
     }
+
+
 }
 
 @media (max-width: 1370px) and (min-width: 1040px) {
@@ -1395,9 +1451,11 @@ footer {
         font-size: 31px;
         left: 25%;
     }
+
     .home .home-content .text3 span {
         font-size: 31px;
     }
+
     .navbar .menu li {
         display: block;
         margin-top: 100px;
@@ -1749,6 +1807,7 @@ footer {
     .home .max-width {
         margin: auto 0 auto 32px;
     }
+
     .slider {
         width: 360px;
     }
@@ -1818,9 +1877,10 @@ footer {
 }
 
 @media (max-width: 600px) {
-    section h1{
+    section h1 {
         font-size: 37px;
     }
+
     .skill-content .left .bar1 img {
         top: 19px;
     }
@@ -1866,10 +1926,12 @@ footer {
     .gallery .gallery-container {
         height: 360px;
     }
+
     .button, .btnViewMore {
         padding: 7px;
     }
-    .button a{
+
+    .button a {
         font-size: 17px;
     }
 

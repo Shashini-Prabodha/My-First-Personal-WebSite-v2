@@ -27,7 +27,6 @@ $('.menu_button').click(function () {
     $('.menu_button i').toggleClass("active");
 });
 
-
 let options = {
     startAngle: -1.55,
     size: 126,
