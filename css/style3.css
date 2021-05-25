@@ -1,3 +1,53 @@
+#VProject #home {
+    background: url("../asserts/icon/pp.jpg");
+    height: 78vh;
+    background-size: cover;
+}
+.scrollBtn{
+    position: absolute;
+    width: 11vh;
+    height: 11vh;
+    bottom: 18vh;
+    left: 50vw;
+    z-index: 2;
+    background: white;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.scrollbtnimg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    animation: moveIcon 2s infinite;
+}
+
+@keyframes moveIcon {
+    0% {
+        transform: translate(0px, 0);
+
+    }
+    50% {
+        transform: translate(0px, 15px);
+    }
+
+    100% {
+        transform: translate(0px, 0);
+
+    }
+}
+
+.homeRectangle {
+    z-index: 2;
+    position: absolute;
+    height: 78vh;
+    width: 100%;
+    /*background: rgba(46, 0, 124, 0.3);*/
+    background: rgba(20, 0, 53,0.4);
+}
+
 
 .projects .project-content .card {
     position: relative;
@@ -137,6 +187,11 @@
 .pro11 {
     background: url("../asserts/icon/as8.jpg");
 }
+
+.pro12 {
+    background: url("../asserts/icon/ass9.png");
+}
+
 
 @media (max-width: 380px) and (min-width: 320px) {
     .projects .card .details_content h3 {

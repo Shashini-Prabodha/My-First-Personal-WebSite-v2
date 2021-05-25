@@ -9,7 +9,9 @@
     letter-spacing: 1px;
 
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /*navbar styling*/
 .navbar {
     /*background: crimson;*/
@@ -99,6 +101,7 @@
     max-width: 1300px;
     margin: auto;
     right: 50px;
+    overflow: hidden;
 }
 
 .navbar .max-width {
@@ -416,7 +419,7 @@
 }
 
 .aboutme .button {
-
+    box-shadow: #d8d8d8 5px -5px 5px;
     transition: all 0.3s ease;
 
 }
@@ -684,7 +687,7 @@ section h1::before {
 .projects {
     background: #FDFDFD;
     padding: 50px 0;
-
+overflow: hidden;
 }
 
 .project-content {
@@ -694,6 +697,7 @@ section h1::before {
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
     /*margin: 5%;*/
 
 }
@@ -710,6 +714,7 @@ section h1::before {
     cursor: pointer;
     overflow: hidden;
     height: 90%;
+
 
 }
 
@@ -777,6 +782,7 @@ section h1::before {
     top: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
+    box-shadow: #d8d8d8 5px -5px 5px;
 
 }
 
@@ -801,6 +807,8 @@ section h1::before {
 .service {
     background: #FDFDFD;
     padding: 50px 0;
+    overflow: hidden;
+
 }
 
 .service h1 {
@@ -961,11 +969,11 @@ section h1::before {
 .contact {
     background: #fdfdfd;
     padding: 50px 0;
-
 }
 
 .contact-content {
     display: flex;
+
 }
 
 .contact h1 {
@@ -1010,6 +1018,7 @@ section h1::before {
 .contact .right {
     width: 45%;
     margin: 3% 5% 5%;
+
 }
 
 .contactimg {
@@ -1062,17 +1071,19 @@ section h1::before {
 
 .contact-content .btnSent {
     width: max-content;
-    height: 5vh;
+    height: 4vh;
+    font-size: 14px;
     background: #eae8e8;
-    border-radius: 25px;
-    font-family: 'Ubuntu';
-    padding: 10px;
+    border-radius: 11px;
+    font-family: Ubuntu;
+    padding: 6px;
     border-style: hidden;
     position: absolute;
     transform: translate(140%, 0);
     box-shadow: darkgrey 2px 5px 6px;
     border: 1px solid transparent;
     transition: all 0.3s ease;
+
 }
 
 .btnSent:hover {

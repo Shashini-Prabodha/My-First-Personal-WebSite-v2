@@ -1,4 +1,6 @@
-
+AOS.init({
+    duration: 1500,
+});
 $(document).ready(function () {
     $(window).scroll(function () {
         if (this.scrollY > 20) {
@@ -34,7 +36,7 @@ let options = {
     fill: {gradient: ['#0ff5ef', '#ac0276', "#f634e4"]}
 }
 $(window).scroll(function () {
-    if (this.scrollY >= 600 & this.scrollY <=700) {
+    if (this.scrollY >= 600 & this.scrollY <= 700) {
         $(".circle .bar").circleProgress(options).on('circle-animation-progress', function (event, progress, stepValue) {
             $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
         });
@@ -57,6 +59,7 @@ $(window).scroll(function () {
         $(".spring .bar").circleProgress({
             value: 0.00
         });
-    }});
+    }
+});
 
 

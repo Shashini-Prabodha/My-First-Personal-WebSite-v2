@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Shashini Prabodha</title>
+    <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1">
+
     <link href="css/normalize.css" rel="stylesheet">
     <link href="asserts/fonts/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="asserts/icon/splogo.png">
@@ -10,10 +12,17 @@
     <link rel="stylesheet" href="css/style3.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration:2000,
+        });
+    </script>
     <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
@@ -30,11 +39,11 @@
         <div class="max-width">
             <div class="logo"><a href="#">S<span>P</span></a></div>
             <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#home">Home</a></li>
+                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#aboutme">About Me</a></li>
+                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#skills">Skills</a></li>
+                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#projects">Projects</a></li>
+                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#contact">Contact</a></li>
             </ul>
             <div class="menu_button">
                 <i class="fas fa-bars"></i>
@@ -46,7 +55,7 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text1">Hello,<br> I'm</div>
+                <div class="text1"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Hello,<br> I'm</div>
                 <div class="text2">
                     <span>S</span>
                     <span>H</span>
@@ -65,7 +74,7 @@
                     <span>H</span>
                     <span>A</span>
                 </div>
-                <button class="button" id="btnContactme"><a href="#contact">
+                <button class="button" id="btnContactme"  data-aos="fade-right"><a href="#contact">
                     Contact me</a>
                 </button>
                 <div class="text3">And I'm a
@@ -88,12 +97,12 @@
         <aside></aside>
         <aside></aside>
         <div class="max-width">
-            <h1 class="title">About <span>Me</span></h1>
+            <h1 class="title" data-aos="zoom-out">About <span>Me</span></h1>
             <div class="aboutme-content">
-                <div class="column left">
+                <div class="column left" data-aos="fade-right" data-aos-duration="1500">
                     <img src="asserts/icon/picmy.jpg">
                 </div>
-                <div class="column right">
+                <div class="column right" data-aos="fade-left" >
                     <h3 class="caption">I<span>' </span>m <span>S</span>hashini <span>P</span>rabodha</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the
@@ -108,7 +117,7 @@
                         and scrambled it to make a type specimen
                         book.
                     </p>
-                    <button class="button" id="btnCV"><a href="#">
+                    <button class="button" id="btnCV"  ><a href="https://drive.google.com/file/d/1jygBqgVcWjszRyjwrG62dob8wH1OeBPD/view?usp=sharing">
                         Download CV</a>
                     </button>
                 </div>
@@ -121,10 +130,10 @@
     <section class="skills" id="skills">
 
         <div class="max-width">
-            <h1 class="title">Skill<span>s</span></h1>
+            <h1 class="title" data-aos="fade-up">Skill<span>s</span></h1>
             <div class="skill-content">
 
-                <div class="column left">
+                <div class="column left" >
                     <!--                <div class="bar1"><img src="asserts/icon/java_100px%20-%20Copy.png">-->
                     <!--                    <h3>65%</h3></div>-->
                     <!--                <div class="bar2"><img src="asserts/icon/html_5_100px.png">-->
@@ -137,8 +146,8 @@
                     <!--                    <h3>20%</h3></div>-->
                     <!--                <div class="bar6"><img src="asserts/icon/spring.png">-->
                     <!--                    <h3>0%</h3></div>-->
-                    <div class="wrapper">
-                        <div class="card java">
+                    <div class="wrapper" >
+                        <div class="card java" data-aos="flip-left">
                             <div class="circle">
                                 <div class="bar">
                                     <div class="box"><span>70%</span></div>
@@ -146,7 +155,7 @@
                             </div>
                             <div class="text">JAVA</div>
                         </div>
-                        <div class="card html">
+                        <div class="card html" data-aos="flip-left">
                             <div class="circle">
                                 <div class="bar">
                                     <div class="box"><span>65%</span></div>
@@ -154,7 +163,7 @@
                             </div>
                             <div class="text">HTML & CSS</div>
                         </div>
-                        <div class="card sql">
+                        <div class="card sql" data-aos="flip-left">
                             <div class="circle">
                                 <div class="bar">
                                     <div class="box"><span>50%</span></div>
@@ -162,7 +171,7 @@
                             </div>
                             <div class="text">MY SQL</div>
                         </div>
-                        <div class="card js">
+                        <div class="card js" data-aos="flip-left">
                             <div class="circle">
                                 <div class="bar">
                                     <div class="box"><span>20%</span></div>
@@ -170,7 +179,7 @@
                             </div>
                             <div class="text">JAVASCRIPT</div>
                         </div>
-                        <div class="card hb">
+                        <div class="card hb" data-aos="flip-left">
                             <div class="circle">
                                 <div class="bar">
                                     <div class="box"><span>55%</span></div>
@@ -178,7 +187,7 @@
                             </div>
                             <div class="text">HIBERNATE</div>
                         </div>
-                        <div class="card spring">
+                        <div class="card spring" data-aos="flip-left">
                             <div class="circle">
                                 <div class="bar">
                                     <div class="box"><span>0%</span></div>
@@ -190,7 +199,7 @@
                     </div>
                 </div>
                 <div class="column right">
-                    <img src="asserts/icon/skillpic.gif" class="skillimg">
+                    <img src="asserts/icon/skillpic.gif" class="skillimg" data-aos="zoom-in">
                 </div>
             </div>
         </div>
@@ -200,9 +209,10 @@
     <!--projects section start-->
     <section class="projects" id="projects">
         <div class="max-width">
-            <h1 class="title">Project<span>s</span></h1>
+            <h1 class="title" data-aos="fade-up">Project<span>s</span></h1>
             <div class="project-content">
-                <div class="card">
+
+                <div class="card"  data-aos="fade-right">
                     <div class="box">
                         <div class="pro1"><h2>Project 01</h2></div>
                     </div>
@@ -210,33 +220,35 @@
                         <div class="details_content">
                             <h3>Abaya Farm</h3>
                             <p>Poultry Management System.</p>
-                            <p>Language-Java</p>
-                            <p>My SQL, Jasper Report</p>
-
+                            <p>Java, My SQL, Jasper Report</p>
+                            <p><a href="https://drive.google.com/file/d/1wRSLuOGmTecwSVJfVY4eoEGSAff_iYFU/view?usp=sharing" target="_blank" style="padding-top: 10px">Download 📥 </a></p>
                         </div>
                     </div>
                 </div>
-
-                <div class="card">
+                <div class="card" data-aos="fade-up">
                     <div class="box">
                         <div class="pro2"><h2></h2></div>
                     </div>
                     <div class="details">
                         <div class="details_content">
-                            <h3>Royal Institute(Hibernate)</h3>
+                            <h3>Royal Institute</h3>
                             <p>Student Registartion System</p>
+                            <p>Using - Hibernate, MySQL</p>
+                            <p><a href="https://drive.google.com/file/d/1JJj_-YnKlC_wgbxaHuAS68T3osd_0ar-/view?usp=sharing " target="_blank" style="padding-top: 10px">Download 📥 </a></p>
                         </div>
                     </div>
 
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-left">
                     <div class="box">
-                        <div class="pro3"><h2></h2></div>
+                        <div class="pro3"></div>
                     </div>
                     <div class="details">
                         <div class="details_content">
                             <h3>SP Cafe </h3>
                             <p>POS-System Web Application</p>
+                            <p>Using- HTML, CSS, JS, Spring</p>
+                            <p><a href="asserts/assignment/Assignment1(Method%201).html" target="_blank" style="padding-top: 10px">👉 View 👀</a></p>
                         </div>
                     </div>
 
@@ -251,10 +263,10 @@
     <!--service section start-->
     <section class="service" id="service">
         <div class="max-width">
-            <h1 class="title">Service<span>s</span></h1>
+            <h1 class="title" data-aos="fade-up">Service<span>s</span></h1>
             <div class="service-content">
                 <div class="gallery ">
-                    <div class="gallery-container myswiper">
+                    <div class="gallery-container myswiper" data-aos="flip-up" data-aos-duration="2000">
                         <img class="gallery-item gallery-item-1" src="asserts/icon/se.jpg" data-index="1">
                         <img class="gallery-item gallery-item-2" src="asserts/icon/WEB.jpg" data-index="2">
                         <img class="gallery-item gallery-item-3" src="asserts/icon/SERV.jpg" data-index="3">
@@ -325,32 +337,32 @@
     <!--contact section start-->
     <section class="contact" id="contact">
         <div class="max-width">
-            <h1 class="title">Contact <span>M</span>e</h1>
+            <h1 class="title" data-aos="fade-up">Contact <span>M</span>e</h1>
             <div class="social-detail">
                 <div class="social-media">
                     <div class="round">
-                        <div class="fb">
+                        <div class="fb" data-aos="zoom-in" >
                             <a href="https://www.facebook.com/shashiniprabodha.abeygunasekara.7/" target="_blank">
                                 <img src="asserts/icon/facebook_100px.png" alt="fblogo">
                             </a>
                         </div>
                     </div>
                     <div class="round">
-                        <div class="git">
+                        <div class="git" data-aos="zoom-in">
                             <a href="https://github.com/Shashini-Prabodha" target="_blank">
                                 <img src="asserts/icon/github_100px.png" alt="gitlogo">
                             </a>
                         </div>
                     </div>
                     <div class="round">
-                        <div class="linkedin">
+                        <div class="linkedin" data-aos="zoom-in">
                             <a href="https://www.linkedin.com/in/shashini-p-6034471bb/" target="_blank">
                                 <img src="asserts/icon/linkedin_100px.png" alt="linkedinlogo">
                             </a>
                         </div>
                     </div>
                     <div class="round">
-                        <div class="stack">
+                        <div class="stack" data-aos="zoom-in">
                             <a href="https://stackoverflow.com/users/12910819/shashini-prabodha?tab=profile"
                                target="_blank">
                                 <img src="asserts/icon/stack_overflow_100px.png" alt="stacklogo">
@@ -358,7 +370,7 @@
                         </div>
                     </div>
                     <div class="round">
-                        <div class="twitter">
+                        <div class="twitter" data-aos="zoom-in">
                             <a href="https://twitter.com/ShashiniPrabod2" target="_blank">
                                 <img src="asserts/icon/twitter_100px.png" alt="twitterlogo">
                             </a>
@@ -366,14 +378,14 @@
                     </div>
 
                 </div>
-                <div class="headerline"></div>
+                <div class="headerline" data-aos="zoom-in"></div>
             </div>
 
             <div class="contact-content">
-                <div class="column left">
+                <div class="column left" data-aos="zoom-in-right">
                     <img src="asserts/icon/contactimg-removebg.png" class="contactimg" alt="contact img">
                 </div>
-                <div class="column right">
+                <div class="column right" data-aos="zoom-in-left">
                     <form action="#">
                         <div class="field">
                             <div class="field name">
@@ -386,12 +398,13 @@
                                 <input type="text" placeHolder="Subject">
                             </div>
                             <div class="field message">
-                                <textarea cols="30" rows="10" placeholder="Message" required></textarea>
+                                <textarea cols="30" rows="5" placeholder="Message" required></textarea>
                             </div>
+                            <button type="submit" class="btnSent">
+                                Send Message
+                            </button>
                         </div>
-                        <button type="submit" class="btnSent">
-                            Send Message
-                        </button>
+
                     </form>
                 </div>
             </div>
@@ -410,7 +423,7 @@
 <script src="js/script.js"></script>
 <script src="js/carousel.js"></script>
 <script src="js/snowfall.js"></script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 </html>

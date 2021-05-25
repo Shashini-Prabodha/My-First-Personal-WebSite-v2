@@ -7,5 +7,6 @@
     <orderEntry type="library" name="jquery-3.5.1" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="jquery-circle-progress" level="application" />
+    <orderEntry type="library" name="aos" level="application" />
   </component>
 </module>
