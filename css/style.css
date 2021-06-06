@@ -628,7 +628,7 @@ section h1::before {
     width: calc(33% - 20px);
     background: #f7f7f7;
     box-shadow: #959595 2px 5px 12px;
-    height: 250px;
+    height: 200px;
     margin-bottom: 20px;
     align-items: center;
     border-radius: 5px;
@@ -640,7 +640,6 @@ section h1::before {
 
 .wrapper .card .circle {
     height: 130px;
-    width: 130px;
     /*border: 8px solid crimson;*/
     border-radius: 50%;
     position: relative;

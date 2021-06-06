@@ -57,6 +57,15 @@ $(window).scroll(function () {
         $(".spring .bar").circleProgress({
             value: 0.60
         });
+        $(".angular .bar").circleProgress({
+            value: 0.10
+        });
+        $(".react .bar").circleProgress({
+            value: 0.40
+        });
+        $(".node .bar").circleProgress({
+            value: 0.00
+        });
     }
 });
 
