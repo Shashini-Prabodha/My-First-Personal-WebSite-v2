@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="css/style3.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="aos/aos.css" rel="stylesheet">
 
-
+    <script src="aos/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration:2000,
+            duration: 1200,
+            once: true,
         });
     </script>
     <style>
@@ -33,17 +33,20 @@
 <body>
 
 
-</section>
 <section class="profileBody">
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">S<span>P</span></a></div>
             <ul class="menu">
                 <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#home">Home</a></li>
-                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#aboutme">About Me</a></li>
-                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#skills">Skills</a></li>
-                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#projects">Projects</a></li>
-                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#contact">Contact</a></li>
+                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#aboutme">About
+                    Me</a></li>
+                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#skills">Skills</a>
+                </li>
+                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"
+                       href="#projects">Projects</a></li>
+                <li><a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"
+                       href="#contact">Contact</a></li>
             </ul>
             <div class="menu_button">
                 <i class="fas fa-bars"></i>
@@ -55,7 +58,9 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text1"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Hello,<br> I'm</div>
+                <div class="text1" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                     data-aos-delay="350">Hello,<br> I'm
+                </div>
                 <div class="text2">
                     <span>S</span>
                     <span>H</span>
@@ -74,10 +79,10 @@
                     <span>H</span>
                     <span>A</span>
                 </div>
-                <button class="button" id="btnContactme"  data-aos="fade-right"><a href="#contact">
+                <button class="button" id="btnContactme" data-aos="zoom-in"><a href="#contact">
                     Contact me</a>
                 </button>
-                <div class="text3">And I'm a
+                <div class="text3" data-aos="zoom-in" data-aos-delay="400">And I'm a
                     <span class="t1">Programmer</span>
                     <!--                <span class="t2">Designer</span>-->
                     <!--                <span class="t3">Freelancer</span>-->
@@ -97,12 +102,12 @@
         <aside></aside>
         <aside></aside>
         <div class="max-width">
-            <h1 class="title" data-aos="zoom-out">About <span>Me</span></h1>
+            <h1 class="title" data-aos="fade-up">About <span>Me</span></h1>
             <div class="aboutme-content">
-                <div class="column left" data-aos="fade-right" data-aos-duration="1500">
+                <div class="column left" data-aos="fade-right">
                     <img src="asserts/icon/picmy.jpg">
                 </div>
-                <div class="column right" data-aos="fade-left" >
+                <div class="column right" data-aos="fade-left">
                     <h3 class="caption">I<span>' </span>m <span>S</span>hashini <span>P</span>rabodha</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the
@@ -117,7 +122,8 @@
                         and scrambled it to make a type specimen
                         book.
                     </p>
-                    <button class="button" id="btnCV"  ><a href="https://drive.google.com/file/d/1jygBqgVcWjszRyjwrG62dob8wH1OeBPD/view?usp=sharing">
+                    <button class="button" id="btnCV"><a
+                            href="https://drive.google.com/file/d/1jygBqgVcWjszRyjwrG62dob8wH1OeBPD/view?usp=sharing">
                         Download CV</a>
                     </button>
                 </div>
@@ -133,7 +139,7 @@
             <h1 class="title" data-aos="fade-up">Skill<span>s</span></h1>
             <div class="skill-content">
 
-                <div class="column left" >
+                <div class="column left">
                     <!--                <div class="bar1"><img src="asserts/icon/java_100px%20-%20Copy.png">-->
                     <!--                    <h3>65%</h3></div>-->
                     <!--                <div class="bar2"><img src="asserts/icon/html_5_100px.png">-->
@@ -146,7 +152,7 @@
                     <!--                    <h3>20%</h3></div>-->
                     <!--                <div class="bar6"><img src="asserts/icon/spring.png">-->
                     <!--                    <h3>0%</h3></div>-->
-                    <div class="wrapper" >
+                    <div class="wrapper">
                         <div class="card java" data-aos="flip-left">
                             <div class="circle">
                                 <div class="bar">
@@ -155,7 +161,7 @@
                             </div>
                             <div class="text">JAVA</div>
                         </div>
-                        <div class="card html" data-aos="flip-left">
+                        <div class="card html" data-aos="flip-left" data-aos-delay="150">
                             <div class="circle">
                                 <div class="bar">
                                     <div class="box"><span>65%</span></div>
@@ -163,7 +169,7 @@
                             </div>
                             <div class="text">HTML & CSS</div>
                         </div>
-                        <div class="card sql" data-aos="flip-left">
+                        <div class="card sql" data-aos="flip-left" data-aos-delay="250">
                             <div class="circle">
                                 <div class="bar">
                                     <div class="box"><span>50%</span></div>
@@ -171,7 +177,7 @@
                             </div>
                             <div class="text">MY SQL</div>
                         </div>
-                        <div class="card js" data-aos="flip-left">
+                        <div class="card js" data-aos="flip-left" data-aos-delay="350">
                             <div class="circle">
                                 <div class="bar">
                                     <div class="box"><span>20%</span></div>
@@ -179,7 +185,7 @@
                             </div>
                             <div class="text">JAVASCRIPT</div>
                         </div>
-                        <div class="card hb" data-aos="flip-left">
+                        <div class="card hb" data-aos="flip-left" data-aos-delay="450">
                             <div class="circle">
                                 <div class="bar">
                                     <div class="box"><span>55%</span></div>
@@ -187,7 +193,7 @@
                             </div>
                             <div class="text">HIBERNATE</div>
                         </div>
-                        <div class="card spring" data-aos="flip-left">
+                        <div class="card spring" data-aos="flip-left" data-aos-delay="550">
                             <div class="circle">
                                 <div class="bar">
                                     <div class="box"><span>0%</span></div>
@@ -212,7 +218,7 @@
             <h1 class="title" data-aos="fade-up">Project<span>s</span></h1>
             <div class="project-content">
 
-                <div class="card"  data-aos="fade-right">
+                <div class="card" data-aos="fade-right">
                     <div class="box">
                         <div class="pro1"><h2>Project 01</h2></div>
                     </div>
@@ -221,7 +227,9 @@
                             <h3>Abaya Farm</h3>
                             <p>Poultry Management System.</p>
                             <p>Java, My SQL, Jasper Report</p>
-                            <p><a href="https://drive.google.com/file/d/1wRSLuOGmTecwSVJfVY4eoEGSAff_iYFU/view?usp=sharing" target="_blank" style="padding-top: 10px">Download 📥 </a></p>
+                            <p>
+                                <a href="https://drive.google.com/file/d/1wRSLuOGmTecwSVJfVY4eoEGSAff_iYFU/view?usp=sharing"
+                                   target="_blank" style="padding-top: 10px">Download 📥 </a></p>
                         </div>
                     </div>
                 </div>
@@ -234,7 +242,9 @@
                             <h3>Royal Institute</h3>
                             <p>Student Registartion System</p>
                             <p>Using - Hibernate, MySQL</p>
-                            <p><a href="https://drive.google.com/file/d/1JJj_-YnKlC_wgbxaHuAS68T3osd_0ar-/view?usp=sharing " target="_blank" style="padding-top: 10px">Download 📥 </a></p>
+                            <p>
+                                <a href="https://drive.google.com/file/d/1JJj_-YnKlC_wgbxaHuAS68T3osd_0ar-/view?usp=sharing "
+                                   target="_blank" style="padding-top: 10px">Download 📥 </a></p>
                         </div>
                     </div>
 
@@ -248,7 +258,8 @@
                             <h3>SP Cafe </h3>
                             <p>POS-System Web Application</p>
                             <p>Using- HTML, CSS, JS, Spring</p>
-                            <p><a href="asserts/assignment/Assignment1(Method%201).html" target="_blank" style="padding-top: 10px">👉 View 👀</a></p>
+                            <p><a href="asserts/assignment/Assignment1(Method%201).html" target="_blank"
+                                  style="padding-top: 10px">👉 View 👀</a></p>
                         </div>
                     </div>
 
@@ -341,7 +352,7 @@
             <div class="social-detail">
                 <div class="social-media">
                     <div class="round">
-                        <div class="fb" data-aos="zoom-in" >
+                        <div class="fb" data-aos="zoom-in">
                             <a href="https://www.facebook.com/shashiniprabodha.abeygunasekara.7/" target="_blank">
                                 <img src="asserts/icon/facebook_100px.png" alt="fblogo">
                             </a>
@@ -400,9 +411,11 @@
                             <div class="field message">
                                 <textarea cols="30" rows="5" placeholder="Message" required></textarea>
                             </div>
-                            <button type="submit" class="btnSent">
-                                Send Message
-                            </button>
+                            <div class="field btn">
+                                <button type="submit" class="btnSent">
+                                    Send Message
+                                </button>
+                            </div>
                         </div>
 
                     </form>
@@ -423,7 +436,6 @@
 <script src="js/script.js"></script>
 <script src="js/carousel.js"></script>
 <script src="js/snowfall.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 </html>

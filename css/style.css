@@ -1068,6 +1068,9 @@ overflow: hidden;
     font-size: 17px;
     font-family: Poppins;
 }
+.contact-content form{
+    padding: 12px;
+}
 
 .contact-content .btnSent {
     width: max-content;
@@ -1080,7 +1083,7 @@ overflow: hidden;
     border-style: hidden;
     position: absolute;
     transform: translate(140%, 0);
-    box-shadow: darkgrey 2px 5px 6px;
+    box-shadow: #d9d8d8 2px 5px 6px;
     border: 1px solid transparent;
     transition: all 0.3s ease;
 
@@ -1148,26 +1151,6 @@ footer {
         box-shadow: 0 0 30px rgba(16, 16, 16, 0.6), 0 0 60px rgba(0, 0, 0, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
         height: 400px;
         width: 400px;
-    }
-}
-
-@media (max-width: 950px) {
-
-    .gallery .gallery-container .gallery-item {
-        height: 200px;
-        width: 200px;
-    }
-
-    .gallery .gallery-container .gallery-item-2,
-    .gallery .gallery-container .gallery-item-4 {
-        height: 250px;
-        width: 250px;
-    }
-
-    .gallery .gallery-container .gallery-item-3 {
-        box-shadow: 0 0 30px rgba(16, 16, 16, 0.6), 0 0 60px rgba(0, 0, 0, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
-        height: 350px;
-        width: 350px;
     }
 }
 
@@ -1408,6 +1391,25 @@ footer {
 }
 
 @media (max-width: 950px) {
+
+
+    .gallery .gallery-container .gallery-item {
+        height: 200px;
+        width: 200px;
+    }
+
+    .gallery .gallery-container .gallery-item-2,
+    .gallery .gallery-container .gallery-item-4 {
+        height: 250px;
+        width: 250px;
+    }
+
+    .gallery .gallery-container .gallery-item-3 {
+        box-shadow: 0 0 30px rgba(16, 16, 16, 0.6), 0 0 60px rgba(0, 0, 0, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+        height: 350px;
+        width: 350px;
+    }
+
     .max-width {
         padding: 0 20px;
     }
@@ -1440,16 +1442,6 @@ footer {
         padding: 0 10px;
     }
 
-    /*.back-rect {*/
-    /*    width: 425px;*/
-    /*    top: 120px;*/
-    /*    height: 425px;*/
-    /*}*/
-    /*.front-img {*/
-    /*    width: 430px;*/
-    /*    height: 430px;*/
-    /*    top: 50px;*/
-    /*}*/
     .back-rect {
         display: none;
     }
@@ -1556,23 +1548,15 @@ footer {
     }
 }
 
-@media (max-width: 950px) and (min-width: 550px) {
-    .home .home-content .text2 {
-        width: 453px
-    }
-
-    .home .home-content .text2 span {
-        font-size: 72px;
-    }
-}
-
 @media (max-width: 950px) and (min-width: 850px) {
     .skill-content .left {
         width: 100%;
+        display: grid;
     }
 
     .skill-content .right {
         flex: 100%;
+        width: fit-content;
     }
 
     .serviceimg {
@@ -1619,20 +1603,14 @@ footer {
 
 }
 
-@media (max-width: 745px)  and (min-width: 550px) {
-    /*    .wrapper{*/
-    /*        width: 600px;*/
-    /*        flex:100%;*/
-    /*    }*/
-    /*.skill-content .left{*/
-    /*    width: 100%;*/
-    /*}*/
-    /*    .wrapper .card{*/
-    /*        width: 100%;*/
-    /*    }*/
-    /*    .skillimg{*/
-    /*        display: none;*/
-    /*    }*/
+@media (max-width: 950px) and (min-width: 550px) {
+    .home .home-content .text2 {
+        width: 453px
+    }
+
+    .home .home-content .text2 span {
+        font-size: 72px;
+    }
 }
 
 @media (max-width: 850px)  and (min-width: 745px) {
@@ -1698,6 +1676,35 @@ footer {
 
 }
 
+@media (max-width: 800px) {
+    .project-content {
+        display: flex;
+        flex-direction: column;
+        margin: 5%;
+    }
+
+    .project-content .card {
+        width: 100%;
+    }
+
+    .web {
+        left: 175px;
+    }
+
+    .skill-content .left {
+        width: 100%;
+    }
+
+    .wrapper .card {
+        width: 100%;
+    }
+
+    .skillimg {
+        display: none;
+    }
+
+}
+
 @media (max-width: 720px) {
     .serviceimg {
         display: none;
@@ -1725,35 +1732,6 @@ footer {
 
     #radio3:checked ~ .first {
         margin-left: -980px;
-    }
-
-}
-
-@media (max-width: 800px) {
-    .project-content {
-        display: flex;
-        flex-direction: column;
-        margin: 5%;
-    }
-
-    .project-content .card {
-        width: 100%;
-    }
-
-    .web {
-        left: 175px;
-    }
-
-    .skill-content .left {
-        width: 100%;
-    }
-
-    .wrapper .card {
-        width: 100%;
-    }
-
-    .skillimg {
-        display: none;
     }
 
 }

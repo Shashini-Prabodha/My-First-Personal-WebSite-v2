@@ -1,6 +1,4 @@
-AOS.init({
-    duration: 1500,
-});
+AOS.init();
 $(document).ready(function () {
     $(window).scroll(function () {
         if (this.scrollY > 20) {
