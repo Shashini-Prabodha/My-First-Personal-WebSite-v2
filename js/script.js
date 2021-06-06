@@ -43,19 +43,19 @@ $(window).scroll(function () {
             value: 0.70
         });
         $(".html .bar").circleProgress({
-            value: 0.65
+            value: 0.75
         });
         $(".sql .bar").circleProgress({
-            value: 0.50
-        });
-        $(".js .bar").circleProgress({
-            value: 0.20
-        });
-        $(".hb .bar").circleProgress({
             value: 0.55
         });
+        $(".js .bar").circleProgress({
+            value: 0.75
+        });
+        $(".hb .bar").circleProgress({
+            value: 0.50
+        });
         $(".spring .bar").circleProgress({
-            value: 0.00
+            value: 0.60
         });
     }
 });
